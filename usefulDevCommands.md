@@ -7,7 +7,9 @@ npx jest --watch
 ```
 This will run all tests in the folders called __tests__ whenever a file is modified.
 
-## Run a script whenever it is modified: `nodemon`
+## Run a script automatically on change: `nodemon`
+
+The file will be run whenever any of the project's files is modified and saved.
 
 ```bash
 npm i nodemon
