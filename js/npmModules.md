@@ -1,6 +1,6 @@
-# working with node modules
+# Working with node modules
 
-## Create an npm module from scratch?
+## Create an npm module from scratch
 
 ```bash
 npm i yo cheminfo-generator
