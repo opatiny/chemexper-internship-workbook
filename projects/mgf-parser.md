@@ -14,3 +14,17 @@ The database we have been provided is in the MGF format. We want to parse it to 
 **N.B.:** "Natural products are chemical compounds found in nature originating in plants, animals, and microbial and marine sources. Such products are important in the cosmetics, food, and nutrition industries because of their many beneficial properties and positive commercial image. Many active pharmaceutical compounds are natural products or derivatives of natural compounds, and it is estimated that some 40% of the drugs marketed today are derived from chemical structures found in nature. (https://www.molport.com/shop/natural-compound-database)"
 
 **Client:** UNIGE
+
+## Packages used
+
+- `ml-array-xy-sort-x`: sort by x plot (format: `{x: [], y: []}`), we used it to sort the mass spectrum data)
+- `ml-arrayxy-uniquex`: used to remove any recurring values from sorted plot data (format: `{x: [], y: []}`)
+
+## `verifyData`
+
+We created a `verifyData` folder above `src`. In this folder, we wrote a function which allows to verify the data quality by comparing the mono-isotopic mass to a reference. The reference mass is returned by the `mf-parser` package using `new MF(mf).getInfo()`. This function returns data on a molecule based on the molecular formula. We get the molecular formula by using the `openchemlib` `Molecule` class. We create a new instance of `Molecule` based on the SMILES found in the data to verify.
+
+```js
+const molecule = Molecule.fromSmiles(dataSmiles);
+let mf = molecule.getMolecularFormula().formula
+```
