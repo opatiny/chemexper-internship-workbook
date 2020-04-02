@@ -34,3 +34,14 @@ npm i --global npm-check-updates
 ncu -u
 ```
 
+## JS docs
+
+Install the following `cheminfo` package:
+
+```bash
+npm i cheminfo-tools --global
+```
+
+It will give you the command `cheminfo docs`. Running this command automatically creates a folder `docs`in which the js-docs are processed into an html file.
+
+To open the html file, install the Live Server Code plugin, right-click on `index.html` and click "Open with Live Server".

@@ -34,3 +34,9 @@ When a package is installed globally, it's name can (often) be used as a normal 
 ```bash
 npx jest --watch # for example
 ```
+
+## Uninstall package
+
+```bash
+npm uninstall yourPackage
+```

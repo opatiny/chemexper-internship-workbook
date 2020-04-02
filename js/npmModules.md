@@ -40,3 +40,20 @@ Optionally, add a line to the `package.json` file:
 
 Then, you can execute this specific file by running `npm start`.
 
+## Publish an npm package
+
+Get the `cheminfo-publish` command:
+
+```bash
+npm i yo cheminfo-publish --global
+```
+
+Login to npm on your computer by using `npm login`.
+
+Run: 
+
+```bash
+cheminfo-publish
+```
+
+This will ask you to confirm the bump (version), chose default. The package is published to npm. Go to the package settings to add some maintainers.
