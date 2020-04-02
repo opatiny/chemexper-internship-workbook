@@ -23,3 +23,9 @@
     - wrote tests
     - made a function to verify data quality (`verifyData()`)
 - discussed with Luc on how to do the similarity between predicted and experimental MS data
+
+## 2020.04.01
+
+- added options to `cheminfo/mgf-parser` and corresponding tests
+published my first package on npm: `cheminfo/mgf-parser`
+- started developing a new method for the `mljs/spectra-processing` package, to find common x values between 2 spectra
