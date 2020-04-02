@@ -15,10 +15,13 @@ The database we have been provided is in the MGF format. We want to parse it to 
 
 **Client:** UNIGE
 
+## Options
+
 ## Packages used
 
 - `ml-array-xy-sort-x`: sort by x plot (format: `{x: [], y: []}`), we used it to sort the mass spectrum data)
 - `ml-arrayxy-uniquex`: used to remove any recurring values from sorted plot data (format: `{x: [], y: []}`)
+- `ml-array-normed`: used to normalize the ms spectra (sum of y values = 1) and to rescale the MS spectrum (rule of three bringing max peak to a given value)
 
 ## `verifyData`
 
