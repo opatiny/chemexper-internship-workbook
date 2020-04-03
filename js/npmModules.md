@@ -57,3 +57,7 @@ cheminfo-publish
 ```
 
 This will ask you to confirm the bump (version), chose default. The package is published to npm. Go to the package settings to add some maintainers.
+
+If you do not have `cheminfo-publish`, this is what you would have to do:
+
+- 
