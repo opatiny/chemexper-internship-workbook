@@ -1,5 +1,7 @@
 # `cheminfo/mgf-parser`
 
+Link: [https://github.com/cheminfo/mgf-parser](https://github.com/cheminfo/mgf-parser)
+
 ## Goal
 
 Create a parser that inputs an `mgf` format database and converts it into a `JSON`.

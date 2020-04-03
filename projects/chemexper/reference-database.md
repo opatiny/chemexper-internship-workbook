@@ -1,5 +1,7 @@
 # `chemexper/reference-database`
 
+Link: [https://github.com/cheminfo/mgf-parser](https://github.com/cheminfo/mgf-parser)
+
 ## Goal
 Filter a database in the browser based on search parameters in the url. Boiling point, melting point, molecular formula and SMILES are the possible filters, with operators "" (equal), >, <, >=, <= and ~.
 
