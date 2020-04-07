@@ -48,3 +48,12 @@ published my first package on npm: `cheminfo/mgf-parser`
 - fixed `cheminfo/mgf-parser` to handle empty lines
 - followed NMR introduction lesson
 - worked on `cheminfo/dereplication`: trying to export predicted and experimental data as JSON
+    - also wrote a script to check if all entries of experiments have a match with predictions
+
+### 2020.04.07
+
+- started working with issues in github
+- work all day on `cheminfo/dereplication`
+    - enhanced the generation of `predictions.json` and `experiments.json`
+    - wrote `loadData.js`, `similarity.js` and `bestMatch.js`
+    - wrote tests for `loadData.js` and `similarity.js`

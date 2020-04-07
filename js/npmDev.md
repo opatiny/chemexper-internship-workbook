@@ -9,6 +9,8 @@ npx jest --watch
 ```
 This will run all tests in the folders called `__tests__` whenever a file is modified.
 
+WARNING: This command has to be run at the first level of the repository!
+
 ### `npm run test`
 
 Just running `jest`does not execute the same tests as in GitHub, which means that when you push, some tests can be indicated as failing. You see that tests fail in GitHub when there is a little cross next to the last commit message (see image). By clicking on the cross, you can have all the details of the tests failing.
