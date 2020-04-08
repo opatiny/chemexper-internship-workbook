@@ -57,3 +57,10 @@ published my first package on npm: `cheminfo/mgf-parser`
     - enhanced the generation of `predictions.json` and `experiments.json`
     - wrote `loadData.js`, `similarity.js` and `bestMatch.js`
     - wrote tests for `loadData.js` and `similarity.js`
+
+### 2020.04.08
+
+- worked all day on `cheminfo/dereplication`
+    - fixed a few bugs
+    - wrote a lot of documentation
+    - create git pages for the project 

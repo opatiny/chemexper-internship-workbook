@@ -27,7 +27,7 @@ http://127.0.0.1:8080/search?smiles=~C=CC(C)(C)C&bp=<=100
 - `fastify`: allowed to create the web server easily
 - `mf-parser`: convert molecular formula to mono-isotopic mass
 - `openchemlib`: huge library to do chemistry stuff in js, we used the `Molecule`class to convert SMILES to ID code
-- `loadtest`: allows to test the responsiveness of the web server  
+- `loadtest` (dev): allows to test the responsiveness of the web server  
   ```bash
   loadtest -n 10000 -c 10 \"http://127.0.0.1:8080/search?smiles=~C=CC(C)(C)C\"
   ```
