@@ -64,3 +64,11 @@ published my first package on npm: `cheminfo/mgf-parser`
     - fixed a few bugs
     - wrote a lot of documentation
     - create git pages for the project 
+
+### 2020.04.09
+
+- worked all day on `cheminfo/dereplication`
+    - created the `testSimilarity` function to get the `matchIndex` for many experiments
+    - created `testAllAlgorithms` to run `testSimilarity` for all the similarity algorithms of `ml-array-distance`
+    - wrote a lot of doc about how varying parameters influences the `matchIndex`
+- added a new option to `align()` (`ml-spectra-processing`) which allows to weight the delta depending on the X values of the spectrum
