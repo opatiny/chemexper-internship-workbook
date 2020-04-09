@@ -32,7 +32,7 @@ Same as [mgf-parser](./mgf-parser.md).
 
 ## Problems
 
-### Handling very large files
+### Step 1: Handling very large files
 
 While wanting to parse the database, we had a problem with node.js, which threw the error:
 
@@ -46,7 +46,7 @@ Indeed the file was too big to be handled by node as it is. To solve this, we ca
 node --max-old-space-size=8192 -r esm combineMgfCsv.js
 ```
 
-### Verify if experiments have a match in predictions
+### Stap 2: Verify if experiments have a match in predictions
 
 We tried to use the InChi to see wether each experiment has a prediction. However, this did not work, because many experiments did not have one. Therefore, we had to find another unique identifier to match predictions and experiments.
 
@@ -56,57 +56,4 @@ We will therefore have to find a way to convert InChi into SMILES, to be able to
 
 ### Step 6: Bad similarity results
 
-After the `findBestMatches()` function was written, we started testing it on 10 experiments and the complete predicted data. To evaluate if the similarity is good or not, we want to optimize the `matchIndex`: the index of the exact match (the predicted spectrum that actually corresponds to the experiment) in an array of all predictions sorted by similarity with the experiment. 
-
-Ideally, `matchIndex`should be 1, which would mean that the best similarity is between the experiment and the correct predicted spectrum.
-
-The first tests we made, however, were fairly bad. Here is what we obtained for the first 10 experiments with all default options (mergeSpan = 1, alignDelta = 1):
-
-```bash
-experiment   common     matchIndex
-1            32         4260
-2            31         71345
-3            30         40876
-4            18         98723
-5            11         55451
-6            15         11970
-7            14         48598
-8            21         7381
-9            36         39856
-10           38         17944
-```
-
-To enhance this, we thought about setting the `mergeSpan` of `loadData()` to 0.005, but it did not help.
-
-```bash
-experiment   common     matchIndex
-1            45         4879
-2            32         65890
-3            31         41169
-4            27         137461
-5            33         108171
-6            19         24138
-7            22         30797
-8            32         7090
-9            43         17822
-10           44         16573
-```
-
-Then, we tried changing the `alignDelta` option of `similarity()` to 0.005.
-
-Changing both: `mergeSpan` = 0.005, `alignDelta` = 0.005
-
-```bash
-experiment   common     matchIndex
-1            45         4879
-2            32         65890
-3            31         41169
-4            27         137461
-5            33         108171
-6            19         24138
-7            22         30797
-8            32         7090
-9            43         17822
-10           44         16573
-```
-
+We have documented the results of various tests we have led, varying a handful parameters in [dereplicationData.md](./dereplicationData.md) and in [dereplicationStats.md](./dereplicationStats.md)
