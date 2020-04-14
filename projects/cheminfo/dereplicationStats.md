@@ -87,20 +87,36 @@ We set some default values for all these parameters, and then only vary one at a
 | `kulczynski`  |  14642  |
 | `motyka`      |  14642  |
 
-
-
-
-
-## `weight` : none
+## `weight` : none (6)
 
 | Algorithm     | Median |
 |---------------|---------
-| `cosine`      |  15305  |
-| `czekanowski` |  14642  |
-| `dice`        |  14655  |
-| `intersection`|  255    |
-| `jaccard`     |  14655  |
-| `kulczynski`  |  14642  |
-| `motyka`      |  14642  |
+| `cosine`      |  15908 |
+| `czekanowski` |  9702  |
+| `dice`        |  8086  |
+| `intersection`|  337   |
+| `jaccard`     |  8086  |
+| `kulczynski`  |  9702  |
+| `motyka`      |  9702  |
+
+
+## `weight` : none, `mergeSpan`: 0.5 and `alignDelta`: 0.5 (4, 5 and 6)
+
+(done by mistake)
+
+| Algorithm     | Median |
+|---------------|---------
+| `cosine`      |  32194  |
+| `czekanowski` |  19516  |
+| `dice`        |  13614  |
+| `intersection`|  663    |
+| `jaccard`     |  13614  |
+| `kulczynski`  |  19516  |
+| `motyka`      |  19516  |
 
 More tests on the `weight` parameter were done in [dereplicationData.md](./dereplicationData.md)
+
+
+
+
+

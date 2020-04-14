@@ -7,6 +7,8 @@ Write a similarity algorithm that allows to find best matches of predicted mass 
 
 Same as [mgf-parser](./mgf-parser.md).
 
+**Definition:** Dereplication is a process used in recognising and eliminating the active substances that have already been studied in the early stage of the screening process. - [https://www.thefreedictionary.com/Dereplication](https://www.thefreedictionary.com/Dereplication)
+
 **Client:** UNIGE
 
 ## Main steps
