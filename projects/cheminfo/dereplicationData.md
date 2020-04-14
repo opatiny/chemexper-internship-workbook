@@ -263,7 +263,7 @@ number experiments: 772, mergeSpan: 0.05, alignDelta: 0.05, algorithm: intersect
 number experiments: 772, mergeSpan: 0.05, alignDelta: 0.05, algorithm: intersection, norm: loadData, massWeight: defaultMassWeight, massFilter: 0.05
 
  { average: 72501.90284974093,
-   median: 1,
+   median: 76,
    min: 1,
    max: 170599,
    matchIndexHistogram: { '1': 68, '2': 45, '3': 23, '4': 24, '5': 13 },
