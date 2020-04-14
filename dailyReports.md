@@ -72,3 +72,12 @@ published my first package on npm: `cheminfo/mgf-parser`
     - created `testAllAlgorithms` to run `testSimilarity` for all the similarity algorithms of `ml-array-distance`
     - wrote a lot of doc about how varying parameters influences the `matchIndex`
 - added a new option to `align()` (`ml-spectra-processing`) which allows to weight the delta depending on the X values of the spectrum
+
+### 2020.04.14 - w3
+
+- worked all day on `cheminfo/dereplication`
+    - added `massWeight` and `norm` options to nearly all options. THis allows to do everything from the highest level function: `testSimilarity()`
+    - readapted docs
+    - created `median()` method optimized for the application
+    - added the `massFilter` option which allows to filter the predictions to test, by comparing the experiment's and the prediction's `PEPMASS`
+    
