@@ -80,4 +80,9 @@ published my first package on npm: `cheminfo/mgf-parser`
     - readapted docs
     - created `median()` method optimized for the application
     - added the `massFilter` option which allows to filter the predictions to test, by comparing the experiment's and the prediction's `PEPMASS`
-    
+
+### 2020.04.15
+
+- preparing this afternoon's presentation of `dereplication` to the people of UNIGE
+- refactoring the options of `cheminfo/dereplication` in a new branch `refactor-options` -> be careful with the branches!
+- presentation of the project and feedback
