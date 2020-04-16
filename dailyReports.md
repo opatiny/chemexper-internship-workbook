@@ -86,3 +86,12 @@ published my first package on npm: `cheminfo/mgf-parser`
 - preparing this afternoon's presentation of `dereplication` to the people of UNIGE
 - refactoring the options of `cheminfo/dereplication` in a new branch `refactor-options` -> be careful with the branches!
 - presentation of the project and feedback
+
+### 2020.04.16
+
+- fix last bugs on branch `refactor-options` and merge with master
+- add new method to `mljs/spectra-processing/xy`, `getNMaxY` and pushed to npm
+    - this function takes in a spectrum and returns a filtered spectrum with only the N most intense peaks.
+- added an option to `loadData` to use this new function instead of merging too close x values
+    - it gave bad results...
+- started learning React

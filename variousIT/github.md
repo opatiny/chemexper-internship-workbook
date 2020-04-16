@@ -26,6 +26,22 @@ git checkout anotherBranch # go on the branch
 git rebase master # sync anotherBranch with master
 ```
 
+### Merge two branches
+
+When you merge branches, you want to apply all the changes you have made in one branch to another one. This can often generate conflicts, especially is you have worked on the other branch in the meantime. TO verify that you do not have too many conflicts when merging, you can first sync the two branches using `rebase`.
+
+Imagine you want to merge `aBranch` with `master`. Firstly:
+```bash
+git checkout aBranch # go on the branch
+git rebase master # sync aBranch with master
+```
+
+Only if this works, you can safely merge `aBranch` with `master`:
+```bash
+git checkout master
+git merge aBranch # apply all changes of aBranch to master
+```
+
 ## js-docs: Where to put the JS-docs in GitHub
 
 Use the [cheminfo-tools](../js/npmDevPackages) package to generate the docs.
