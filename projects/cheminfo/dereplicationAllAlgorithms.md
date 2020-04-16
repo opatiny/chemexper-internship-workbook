@@ -1,4 +1,4 @@
-# Changing many parameters that have influence on the `matchIndex` (2020.04.09)
+# Changing parameters to see the impact on all the different similarity algorithms (2020.04.09)
 
 [dereplication main doc](./dereplication.md) | [Other tests to optimize matchIndex](./dereplicationData.md)
 
@@ -7,6 +7,8 @@
 The variable that we monitor is the median of the matchIndex of the first 200 experiments.
 
 `matchIndex` is set to `predictions.length` if similarity is zero.
+
+The `massFilter` option was not existing yet.
 
 ## Parameters we test and default values
 

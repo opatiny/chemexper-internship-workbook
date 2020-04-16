@@ -203,7 +203,7 @@ The time taken to load all the data (matching experiments and predictions) from 
 
 The time taken to find the best match in all the 1705999 predictions.
 
-Time for 772 experiments: **17.18s**
+Time for 50 experiments: **17.18s**
 
 Average time per experiment: **0.34s**
 
@@ -219,11 +219,15 @@ Time for 772 experiments: **84.37s**
 
 Average time per experiment: **0.11s**
 
-## `stats` object when all experiments are processed (2020.04.14)
+### Finding best match for all matching experiments, massFilter = 0.05, after optimization of the code
+
+By optimization, we mean that we stop pushing some of the entries if the similarity is zero, so that the `sort` is faster. So if the similarity of the experiment with the exact match is zero, we just set its `matchIndex` to `predictions.length`.
 
 Time for 772 experiments: **71.43s**
 
 Average time per experiment: **0.09s**
+
+## `stats` object when all experiments are processed (2020.04.14)
 
 ### norm in loadData (default)
 
@@ -268,9 +272,123 @@ number experiments: 772, mergeSpan: 0.05, alignDelta: 0.05, algorithm: intersect
    max: 170599,
    matchIndexHistogram: { '1': 68, '2': 45, '3': 23, '4': 24, '5': 13 },
    matchIndexHistogramPercent:
-    { '1': 8.808290155440414,
-      '2': 5.829015544041451,
-      '3': 2.9792746113989637,
-      '4': 3.1088082901554404,
-      '5': 1.6839378238341969 } }
+    { '1': 8.81,
+      '2': 5.83,
+      '3': 2.98,
+      '4': 3.11,
+      '5': 1.68
+      '170599': 42.49 } }
 ```
+
+### loadData.treatment = maxPeaks, numberMaxPeaks = 30 (2020.04.16)
+
+First test after adding this option.
+
+WARNING: Here data is only filtered by maxPeaks -> no mergeX!!!
+
+```bash
+number experiments: 772, mergeSpan: 0.05, alignDelta: 0.05, loadData.norm: true, similarity.norm: false, massWeight: *x^3, massFilter: 0.05
+
+ time to treat data:  73885
+
+{ average: 102324.01165803109,
+  median: 170599,
+  min: 1,
+  max: 170599,
+  matchIndexHistogram:
+   { '1': 69, '2': 32, '3': 23, '4': 11, '5': 10, '170599': 463 },
+  matchIndexHistogramPercent:
+   { '1': '8.94',
+     '2': '4.15',
+     '3': '2.98',
+     '4': '1.42',
+     '5': '1.30',
+     '170599': '59.97' } }
+```
+
+## Varying numberMaxPeaks (2020.04.16)
+
+### Parameters for all
+ number experiments: 772, mergeSpan: 0.05, alignDelta: 0.05, loadData.norm: true, similarity.norm: false, massWeight: *x^3, massFilter: 0.05
+
+### numberMaxPeaks = 30
+
+WARNING: Here data is only filtered by maxPeaks -> no mergeX!!!
+
+```bash
+{ average: 102324.01165803109,
+  median: 170599,
+  min: 1,
+  max: 170599,
+  matchIndexHistogram:
+   { '1': 69, '2': 32, '3': 23, '4': 11, '5': 10, '170599': 463 },
+  matchIndexHistogramPercent:
+   { '1': '8.94',
+     '2': '4.15',
+     '3': '2.98',
+     '4': '1.42',
+     '5': '1.30',
+     '170599': '59.97' } }
+```
+
+### numberMaxPeaks = 100
+
+WARNING: Here data is only filtered by maxPeaks -> no mergeX!!!
+
+```bash
+{ average: 73607.29792746114,
+  median: 83,
+  min: 1,
+  max: 170599,
+  matchIndexHistogram:
+   { '1': 65, '2': 45, '3': 25, '4': 22, '5': 8, '170599': 333 },
+  matchIndexHistogramPercent:
+   { '1': '8.42',
+     '2': '5.83',
+     '3': '3.24',
+     '4': '2.85',
+     '5': '1.04',
+     '170599': '43.13' } }
+```
+
+### numberMaxPeaks = 200
+
+WARNING: Here data is only filtered by maxPeaks -> no mergeX!!!
+
+```bash
+{ average: 72282.78626943006,
+  median: 79,
+  min: 1,
+  max: 170599,
+  matchIndexHistogram:
+   { '1': 62, '2': 44, '3': 25, '4': 24, '5': 10, '170599': 327 },
+  matchIndexHistogramPercent:
+   { '1': '8.03',
+     '2': '5.70',
+     '3': '3.24',
+     '4': '3.11',
+     '5': '1.30',
+     '170599': '42.36' } }
+```
+
+### numberMaxPeaks = 30 and merging X!
+
+```bash
+{ average: 101661.61917098446,
+  median: 170599,
+  min: 1,
+  max: 170599,
+  matchIndexHistogram:
+   { '1': 67, '2': 34, '3': 19, '4': 13, '5': 9, '170599': 460 },
+  matchIndexHistogramPercent:
+   { '1': '8.68',
+     '2': '4.40',
+     '3': '2.46',
+     '4': '1.68',
+     '5': '1.17',
+     '170599': '59.59' } }
+```
+
+### Conclusions
+
+Filtering the max intensity peaks gives worse results. They are less hits in the top five and a lot more cases where similarity with the exact match is zero.
