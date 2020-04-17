@@ -4,7 +4,7 @@ Link: [https://github.com/mljs/spectra-processing](https://github.com/mljs/spect
 
 ## Goal
 
-Add a method to this array manipulation package which allows to "align" the data of two spectra.
+Add a method to this array manipulation package which allows to "align" the data of two spectra. This means that if x values of the two spectra are close to each other, they are considered as common and the corresponding y values are put in the same slot.
 
 ## Context
 

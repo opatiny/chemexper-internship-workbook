@@ -95,3 +95,9 @@ published my first package on npm: `cheminfo/mgf-parser`
 - added an option to `loadData` to use this new function instead of merging too close x values
     - it gave bad results...
 - started learning React
+
+### 2020.04.17
+
+- TO DO: in the `dereplication` project, in `loadData` function, remove the file loading so that the function accepts a txt file instead of a path!
+- created the `cheminfo/mgf-generator package`
+- worked on my registration for HEIG-VD
