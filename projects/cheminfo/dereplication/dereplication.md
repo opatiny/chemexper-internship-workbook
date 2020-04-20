@@ -1,5 +1,7 @@
 # `cheminfo/dereplication`
 
+[Stats: varying all parameters](./dereplicationData.md) | [Stats: comparing similarity algorithms](./dereplicationStats.md)
+
 ## Goal
 Write a similarity algorithm that allows to find best matches of predicted mass spectra for an experimental mass spectrum.
 
@@ -7,7 +9,7 @@ Write a similarity algorithm that allows to find best matches of predicted mass 
 
 Same as [mgf-parser](./mgf-parser.md).
 
-**Definition:** Dereplication is a process used in recognising and eliminating the active substances that have already been studied in the early stage of the screening process. - [https://www.thefreedictionary.com/Dereplication](https://www.thefreedictionary.com/Dereplication)
+**Definition:** "Dereplication is a process used in recognising and eliminating the active substances that have already been studied in the early stage of the screening process." - [https://www.thefreedictionary.com/Dereplication](https://www.thefreedictionary.com/Dereplication)
 
 **Client:** UNIGE
 
@@ -52,7 +54,7 @@ node --max-old-space-size=8192 -r esm combineMgfCsv.js
 
 We tried to use the InChi to see wether each experiment has a prediction. However, this did not work, because many experiments did not have one. Therefore, we had to find another unique identifier to match predictions and experiments.
 
-We decided to use `openchemlib`and to generate the id code of the molecules using the SMILES. Yet again, around half of the experiments did not have a valid SMILES. It appears that the molecule either have the SMILES or the InCHi. 
+We decided to use `openchemlib`and to generate the ID code of the molecules using the SMILES. Yet again, around half of the experiments did not have a valid SMILES. It appears that the molecule either have the SMILES or the InChi. 
 
 We will therefore have to find a way to convert InChi into SMILES, to be able to then work with the other half of the experimental data.
 

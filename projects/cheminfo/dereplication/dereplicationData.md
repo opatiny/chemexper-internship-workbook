@@ -1,6 +1,6 @@
 # `cheminfo/dereplication`:  Bad similarity results
 
-[dereplication main doc](./dereplication.md) | [Other tests to optimize matchIndex](./dereplicationStats.md)
+[Dereplication main doc](./dereplication.md) | [Stats: comparing similarity algorithms](./dereplicationStats.md)
 
 ## General
 

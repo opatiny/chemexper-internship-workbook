@@ -1,6 +1,6 @@
 # Changing parameters to see the impact on all the different similarity algorithms (2020.04.09)
 
-[dereplication main doc](./dereplication.md) | [Other tests to optimize matchIndex](./dereplicationData.md)
+[Dereplication main doc](./dereplication.md) | [Stats: varying all parameters](./dereplicationData.md) 
 
 ## General
 
