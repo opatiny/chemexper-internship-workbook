@@ -13,4 +13,6 @@ This is necessary to enhance the `dereplication` project. It might be useful in 
 ## Packages used
 
 - `mgf-parser`: To parse raw data
-- `mgf-generator`: To generate the modifier MGF at the end
+- `mgf-generator`: To generate the modified MGF at the end
+- `openchemlib`: To get `idCode` and `idCodeNoStereo` from SMILES
+- `debug`(dev): For debug messages
