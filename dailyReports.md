@@ -101,3 +101,11 @@ published my first package on npm: `cheminfo/mgf-parser`
 - TO DO: in the `dereplication` project, in `loadData` function, remove the file loading so that the function accepts a txt file instead of a path!
 - created the `cheminfo/mgf-generator package`
 - worked on my registration for HEIG-VD
+
+### 2020.04.20
+
+- worked on the react tutorial all day
+    - created a few new components: Header, About
+    - imported components from existing libraries -> Router: handling urls
+    - added methods to add / remove items
+    - started thinking about how to use local storage
