@@ -1,5 +1,9 @@
 # Javascript syntax / programming tricks
 
+## `fetch`
+
+`fetch` is a javascript function which is native in the browser. It allows to make requests on a web service. It is asynchronous -> it returns a promise.
+
 ## `switch case`: `default` should throw an error
 
 If you have an empty `default` in a switch case, make it throw an error, so that you know when it is entered.

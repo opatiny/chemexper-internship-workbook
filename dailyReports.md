@@ -109,3 +109,12 @@ published my first package on npm: `cheminfo/mgf-parser`
     - imported components from existing libraries -> Router: handling urls
     - added methods to add / remove items
     - started thinking about how to use local storage
+
+### 2020.04.21
+
+- received and signed contract
+- working on `react-todo-list`
+    - v1.0.0 is working fine
+    - made v2.0.0 with react hooks, works as well
+    - tried to add new features to v2
+- created `rect-mol-structures` to test using zakodium react components
