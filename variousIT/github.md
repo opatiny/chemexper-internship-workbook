@@ -1,5 +1,29 @@
 ## GitHub cheatsheet
 
+## Actions / Workflows
+
+### Publishing an app to GitHub pages
+
+Imagine that you are in the following case: you just finished developing a front-end application that works in the browser, and you want to have a server that will serve it to you. In GitHub, it is possible to have an app served on the GitHub pages by using workflows (aka Actions).
+
+How to do that?
+
+- verify that your app builds (with relative paths!) and that you can run it from Live Server
+- create a `.github/workflows` folder in your project and copy [deploy.yml](./examples/deploy.yml) to it
+    - this is a template that you should modify with your own data
+    - add the file, commit and push
+- create a new access token (if not done yet)
+    - go to your profile Settings -> Developer settings -> Personal access tokens -> Generate new token
+    - name it and give it access to `public_repo`
+    - don't forget to copy the hash!!! It will be lost otherwise
+- create a new Secret
+    - got to the repository Settings -> Secrets
+    - "Add a new secret" and call it `ACCESS_TOKEN`
+    - save the secret
+- locally, make some minor changes and push them
+- the github pages should be automatically set to the `gh-pages` branch
+    - the app will be built and published to gh pages after every push
+
 ## Branches
 
 ### Create a new branch

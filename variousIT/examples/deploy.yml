@@ -1,0 +1,28 @@
+name: gh-pages deployment
+
+on:
+  push:
+    branches: master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: npm install and build
+        run: |
+          npm ci
+          npm run build
+      - name: push to gh-pages
+        run: |
+          git config user.email oceane.patiny.com
+          git config user.name "Océane Patiny"
+          git remote set-url origin "https://opatiny:${{ secrets.ACCESS_TOKEN }}@github.com/opatiny/react-mol-structures.git"
+          npm i -g gh-pages
+          gh-pages -d build --dotfiles
+        env:
+          CI: true
