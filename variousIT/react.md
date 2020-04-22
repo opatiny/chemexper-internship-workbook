@@ -18,9 +18,32 @@ npx create-react-app .
 
 ## Run the server
 
+Once the server is started, it will update automatically when changes are done in the code.
+
 ```bash
 npm start
 ```
+
+## Build
+
+Once the app works as expected, you want to build it to make it executable by a browser. To do that, in a `create-react-app` project, you have to add a line to the first level of `package.json`. This allows to build using relative paths. Having relative paths is mandatory for the app to be launched properly.
+
+Add this line to `packages.json`:
+
+```json
+  "homepage": "./",
+```
+
+Once this is done, proceed to building the project with:
+```bash
+npm run build
+```
+
+This creates a `build` folder at the first level of the project.
+
+## Running the build
+
+Go in the `build` folder, right-click on `index.html` and select "Run with Live Server". A window pops-up in your default browser.
 
 ## Components
 
