@@ -102,7 +102,7 @@ published my first package on npm: `cheminfo/mgf-parser`
 - created the `cheminfo/mgf-generator package`
 - worked on my registration for HEIG-VD
 
-### 2020.04.20
+### 2020.04.20 - w4
 
 - worked on the react tutorial all day
     - created a few new components: Header, About
@@ -115,6 +115,17 @@ published my first package on npm: `cheminfo/mgf-parser`
 - received and signed contract
 - working on `react-todo-list`
     - v1.0.0 is working fine
-    - made v2.0.0 with react hooks, works as well
+    - made v2.0.0 with react hooks on a new branch (`react-hooks`), works as well
     - tried to add new features to v2
-- created `rect-mol-structures` to test using zakodium react components
+- created `rect-mol-structures` to test using Zakodium react components
+
+### 2020.04.22
+
+- learn to create github workflows
+- worked all day on `react-mol-structures`
+    - created header with a menu
+    - input bar for molecular formulas
+    - showing possible molecular structures for the input
+    - error message if mf invalid
+    - loading info
+- pushed the web app to gh pages
