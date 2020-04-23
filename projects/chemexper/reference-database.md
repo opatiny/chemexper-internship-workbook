@@ -1,6 +1,6 @@
 # `chemexper/reference-database`
 
-Link: repo is private
+Link (private repo): [https://github.com/cheminfo/reference-database](https://github.com/cheminfo/reference-database)
 
 ## Goal
 Filter a database in the browser based on search parameters in the url. Boiling point, melting point, molecular formula and SMILES are the possible filters, with operators "" (equal), >, <, >=, <= and ~.
