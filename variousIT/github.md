@@ -2,6 +2,10 @@
 
 ## Actions / Workflows
 
+### Environment variables
+
+See [https://help.github.com/en/actions/configuring-and-managing-workflows/using-environment-variables](https://help.github.com/en/actions/configuring-and-managing-workflows/using-environment-variables)
+
 ### Publishing an app to GitHub pages
 
 Imagine that you are in the following case: you just finished developing a front-end application that works in the browser, and you want to have a server that will serve it to you. In GitHub, it is possible to have an app served on the GitHub pages by using workflows (aka Actions).
