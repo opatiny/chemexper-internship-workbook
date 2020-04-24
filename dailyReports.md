@@ -133,7 +133,10 @@ published my first package on npm: `cheminfo/mgf-parser`
 ### 2020.04.23
 
 - fixed yesterday's github workflow bug (I didn't push the app to the right repository)
-- started working on reference-database-front-end
+- started working on `reference-database-front-end`
     - this will be the GUI that shows the results of a search in the database
     - start learning tailwind
-    
+
+### 2020.04.24
+
+- worked all day on `reference-database-front-end`

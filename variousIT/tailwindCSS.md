@@ -37,3 +37,7 @@ Build the project -> this will fill `main.css`:
 ```bash
 npm run build
 ```
+
+## Links
+
+- Integrating Tailwind UI in react project: [https://tailwindui.com/documentation#integrating-with-javascript-frameworks](https://tailwindui.com/documentation#integrating-with-javascript-frameworks)
