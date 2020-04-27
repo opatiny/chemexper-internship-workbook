@@ -11,6 +11,8 @@ Make the front-end for [reference-database](./reference-database.md).
 - `formik`: component to have one state var for a hole form
 - `react-table`: responsive tables
 - `@fortawesome/fontawesome-free`: for svg icons
+- `react-bootstrap`: popovers -> didn't use this in the end because it influenced the whole style off the app
+- `popper`: for popovers
 
 ## Packages used
 
