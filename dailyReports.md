@@ -141,6 +141,15 @@ published my first package on npm: `cheminfo/mgf-parser`
 
 - worked all day on `reference-database-front-end`
 
-### 2020.04.27
+### 2020.04.27 - w5
 
 - worked all day on `reference-database-front-end`
+    - learned to make responsive design for different screen sizes with tailwind
+
+### 2020.04.28
+
+- worked all day on `reference-database-front-end`
+    - react tables
+    - implementing the js behind all the inputs
+    - creating tables in react
+

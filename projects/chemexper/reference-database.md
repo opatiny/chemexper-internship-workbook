@@ -25,6 +25,7 @@ http://127.0.0.1:8080/search?smiles=~C=CC(C)(C)C&bp=<=100
 
 ## Packages used
 - `fastify`: allowed to create the web server easily
+- `fastify-cors`: to handle cross-origin queries
 - `mf-parser`: convert molecular formula to mono-isotopic mass
 - `openchemlib`: huge library to do chemistry stuff in js, we used the `Molecule`class to convert SMILES to ID code
 - `loadtest` (dev): allows to test the responsiveness of the web server  

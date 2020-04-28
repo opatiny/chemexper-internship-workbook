@@ -5,16 +5,18 @@ Link (private repo): [https://github.com/cheminfo/reference-database-front-end](
 ## Goal
 Make the front-end for [reference-database](./reference-database.md).
 
-## Technologies to learn
+## Packages used
 
-- tailwind: allows to make good-looking GUI with easy to reuse CSS
-- `formik`: component to have one state var for a hole form
-- `react-table`: responsive tables
+- `tailwind-css`: allows to make good-looking GUI with easy to reuse CSS
 - `@fortawesome/fontawesome-free`: for svg icons
 - `react-bootstrap`: popovers -> didn't use this in the end because it influenced the whole style off the app
 - `popper`: for popovers
+- `react-mf`: to format molecular formulas
+- `react-ocl`: render of molecular structures
 
-## Packages used
+## To show in the results
+
+iupac, mf/mw, mol struct, (nbSuppliers)
 
 ## Links
 
@@ -25,3 +27,4 @@ Make the front-end for [reference-database](./reference-database.md).
 - generate color palettes: [https://www.w3schools.com/colors/colors_picker.asp](https://www.w3schools.com/colors/colors_picker.asp)
 - tialwind sidebar template: [https://tailwindcomponents.com/component/sidenav](https://tailwindcomponents.com/component/sidenav)
 - tailwind form template: [https://tailwindcomponents.com/component/simple-form-field](https://tailwindcomponents.com/component/simple-form-field)
+- tailwind popup window: [https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/tooltips/right](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/tooltips/right)
