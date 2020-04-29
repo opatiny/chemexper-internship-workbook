@@ -153,3 +153,6 @@ published my first package on npm: `cheminfo/mgf-parser`
     - implementing the js behind all the inputs
     - creating tables in react
 
+### 2020.04.29
+
+- worked all day on `reference-database-front-end`
