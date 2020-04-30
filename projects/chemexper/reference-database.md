@@ -38,3 +38,4 @@ http://127.0.0.1:8080/search?smiles=~C=CC(C)(C)C&bp=<=100
 
 - `npm start`: start the web server
 - `npm run stress`: test the web server speed and stress resistance (`loadtest`)
+- `npm run start-full`: after docker was added, this has to be used for the front-end to work

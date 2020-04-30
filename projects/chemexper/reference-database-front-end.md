@@ -3,7 +3,7 @@
 Link (private repo): [https://github.com/cheminfo/reference-database-front-end](https://github.com/cheminfo/reference-database-front-end)
 
 ## Goal
-Make the front-end for [reference-database](./reference-database.md).
+Make the front-end for [reference-database](./reference-database.md). This project will consist of a responsive web app using React.js and Tailwind CSS. There will be a sidebar with various input fields which allow to filter the database. The filters are passed as javascript variables to a function that uses the GET protocol to query the database. The results are shown in a table.
 
 ## Packages used
 
@@ -16,7 +16,21 @@ Make the front-end for [reference-database](./reference-database.md).
 
 ## To show in the results
 
-iupac, mf/mw, mol struct, (nbSuppliers)
+We want to show the following fields in the results:
+- IUPAC name
+- Formatted molecular formula and molecular weight
+- An svg image of the molecular structure
+- Only if the screen is big enough: the number of suppliers
+
+## Results
+
+<img src="./images/frontend-screenshot-info.png" alt="./images/frontend-screenshot-info.png" width="100%" class="center">
+General layout and info popup.
+
+<br/><br/>
+
+<img src="./images/frontend-screenshot.png" alt="./images/frontend-screenshot.png" width="100%" class="center">
+Quick search for chalk using molecular formula CaCO3.
 
 ## Links
 
