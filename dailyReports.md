@@ -167,3 +167,9 @@ published my first package on npm: `cheminfo/mgf-parser`
 ### 2020.04.30
 
 - worked all day on `reference-database-front-end`
+    - decided that the frontend was finished
+    - the table is working and the layout is fairly decent for small and large screens
+- wrote a lot of doc about React and Tailwind
+- started working on bioreactor project
+    - learning basics of InfluxDB
+    

@@ -9,4 +9,7 @@ Link: [https://github.com/cheminfo/mgf-parser](https://github.com/cheminfo/mgf-p
 
 ## Packages used
 
-## Developer bash commands
+
+## Links
+
+- video introducing NodeRed, InfluxDB and Grafana: [https://www.youtube.com/watch?v=JdV4x925au0&list=WL&index=174&t=0s](https://www.youtube.com/watch?v=JdV4x925au0&list=WL&index=174&t=0s)
