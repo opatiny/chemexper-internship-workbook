@@ -156,3 +156,14 @@ published my first package on npm: `cheminfo/mgf-parser`
 ### 2020.04.29
 
 - worked all day on `reference-database-front-end`
+    - made next/previous feature for table
+    - enhanced some of the layout
+- meeting with Columbia to talk about the bioreactor project. I will have to work on the logging/GUI using technologies like:
+    - NodeRed
+    - InfluxDB
+    - MQTT
+    - Docker
+
+### 2020.04.30
+
+- worked all day on `reference-database-front-end`

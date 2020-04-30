@@ -82,7 +82,7 @@ Copy the GitHub Pages link, go back to the project main page and paste it next t
 
 You see that tests fail in GitHub when there is a little cross next to the last commit message (see image). By clicking on the cross, you can have all the details of the tests failing.
 
-<img src="../images/github-commit-test-fail.png" alt="../images/github-commit-test-fail.png" width="70%" class="center">
+<img src="./images/github-commit-test-fail.png" alt="./images/github-commit-test-fail.png" width="70%" class="center">
 
 ## Unstage last commit
 
