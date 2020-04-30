@@ -1,10 +1,19 @@
 # How to use tailwind CSS?
 
-## What it does
+## Context
 
-It allows you to replace standard css classes by inline styling. You have a bunch of options to chose from to change things size, color, etc.
+Tailwind CSS is an npm package that allows you to replace standard css classes by inline styling. You have a bunch of options to chose from to change things like size, color, placement, etc.
 
-## Install
+## VScode plugins
+
+- **Tailwind CSS IntelliSense**: autocompletion and info on hover -> use `Ctrl+space` to show autocompletion if it's not showing by default
+- **Tailwind Docs**: easily access tailwind docs
+
+## Create new React+Tailwind project with `yo`
+
+Refer to [the react doc](./react.md).
+
+## Install in an npm project
 
 Use `create-react-app` to start a project and in this folder:
 
@@ -37,6 +46,21 @@ Build the project -> this will fill `main.css`:
 ```bash
 npm run build
 ```
+
+At this point, you should be able to use all the tailwind styling.
+
+## Templates
+
+### Form
+[https://tailwindcomponents.com/component/simple-form-field](https://tailwindcomponents.com/component/simple-form-field)
+
+### Popup window / Tooltip
+ [https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/tooltips/right](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/tooltips/right)
+
+You can base yourself on this example file: [Tooltip.js](./examples/Tooltip.js).
+
+### Sidebar
+[https://tailwindcomponents.com/component/sidenav](https://tailwindcomponents.com/component/sidenav)
 
 ## Links
 
