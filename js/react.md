@@ -71,6 +71,52 @@ There should be one component definition per file.
 
 React components are written in javascript, but since the syntax is very different from normal js, the files have their own file extension: `.jsx`. However, you can use `.js`.
 
+## `props`
+
+All components accept a `props` object as a default parameter. The props are passed in this way on the component call:
+
+```js
+<Header title={"Hello world"} />
+```
+
+In this example, a prop `title` is passed to the component `Header` with value `Hello world`.
+The `Header` component, on its side, would refer to the props as follows:
+
+```js
+import React from 'react'
+
+export default function Header(props) {
+  return (
+    <div>
+      <h1>{props.title}</h1>
+    </div>
+  )
+}
+```
+## Hooks
+Hooks are a recent addition to React which allow you not to use classes anymore (no more class based components).
+
+## `useState()` - State variables
+Often, you want to share variables between different component -> pass a parameter from parent to child. These variables are called "state variables, and they are defined as follows:
+ ```js
+const [state, setState] = useState(initialState)
+```
+`state`is the the new state variable, `setState` is a function that allows to change its value and `initialState` is the initial value of the variable. The name of the function to set the value should always start with the word `set`. 
+
+State variables and the functions to set them can be passed as `props` to components.
+
+## `useEffect()`
+The `useEffect` hook allows you to listen to changes in the DOM, or changes of state variables. You can therefore execute a function only when there is a change. You can call this function inside of a component, before the `return`.
+
+ ```js
+const [results, setResults] = useState({})
+
+useEffect(() => {
+    console.log(results);
+  }, [results]);
+```
+In the above example, the `results` variable would be printed in the console whenever any of the components of the app changes its value using `setResults`
+
 ## VScode plugins
 
 To create components more easily: `ES7 React/Redux/GraphQL/React-Native snippets`

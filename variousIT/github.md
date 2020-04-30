@@ -13,7 +13,7 @@ Imagine that you are in the following case: you just finished developing a front
 How to do that?
 
 - verify that your app builds (with relative paths!) and that you can run it from Live Server
-- create a `.github/workflows` folder in your project and copy [deploy.yml](./examples/deploy.yml) to it
+- create a `.github/workflows` folder in your project and copy [deploy.yml](./layouts/deploy.yml) to it
     - this is a template that you should modify with your own data
     - add the file, commit and push
 - create a new access token (if not done yet)

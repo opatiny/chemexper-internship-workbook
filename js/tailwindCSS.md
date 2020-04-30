@@ -49,6 +49,10 @@ npm run build
 
 At this point, you should be able to use all the tailwind styling.
 
+## Add custom styles
+
+To add custom styles to Tailwind CSS, add your classes to the [`tailwind.js`](./layouts/tailwind.js) file and build the project again.
+
 ## Templates
 
 ### Form
@@ -57,10 +61,15 @@ At this point, you should be able to use all the tailwind styling.
 ### Popup window / Tooltip
  [https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/tooltips/right](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/tooltips/right)
 
-You can base yourself on this example file: [Tooltip.js](./examples/Tooltip.js).
+You can base yourself on this example file: [Tooltip.js](./layouts/Tooltip.js).
 
 ### Sidebar
 [https://tailwindcomponents.com/component/sidenav](https://tailwindcomponents.com/component/sidenav)
+
+### Fixed header scrollable table
+[https://tailwindcomponents.com/component/fixed-height-scrollable-table](https://tailwindcomponents.com/component/fixed-height-scrollable-table)
+
+You can base yourself on this example file: [Table.js](./layouts/Table.js).
 
 ## Links
 
