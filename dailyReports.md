@@ -171,5 +171,16 @@ published my first package on npm: `cheminfo/mgf-parser`
     - the table is working and the layout is fairly decent for small and large screens
 - wrote a lot of doc about React and Tailwind
 - started working on bioreactor project
-    - learning basics of InfluxDB
-    
+    - learning basics of InfluxDB and Grafana
+
+
+## May
+
+### 2020.05.01
+
+- continued learning InfluxDB
+    - created a little project in `opatiny/influxdb-cores-temperature`
+    - installed Influx DB form binaries, started server and client
+    - accessed the db server from node
+    - stored the temperature of my computer's cores in the db
+    - wrote debug messages to see last entries of the db
