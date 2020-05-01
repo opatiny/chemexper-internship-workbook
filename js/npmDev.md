@@ -56,9 +56,9 @@ It will give you the command `cheminfo docs`. Running this command automatically
 
 To open the html file, install the Live Server Code plugin, right-click on `index.html` and click "Open with Live Server".
 
-## Apply cheminfo formatting rules
+## Apply Cheminfo formatting rules
 
-To apply the auto formatting rules of cheminfo, you have to do the following things inside of your project folder.
+To apply the auto formatting rules of Cheminfo, you have to do the following things inside of your project folder.
 
 WARNING: Be super careful with the commas and alphabetical order when editing `package.json`.
 
@@ -93,18 +93,34 @@ In `package.json`, replace the `eslintConfig` object (if it exists) by:
   },
 ```
 
+### Create or replace `.eslintrc.yml`
+If it doesn't exist, create a `.eslintrc.yml` file at the first level of the project.
+
+If your project is a module, this file should already exist and contain:
+```
+extends: cheminfo
+parserOptions:
+  sourceType: module
+``` 
+
+If you are creating a project from scratch, create the file and put this line in it:
+```
+extends: cheminfo
+``` 
+
+
 ### Create or replace `.prettierrc` file
 
 If it doesn't exist, create a `.prettierrc` file at the first level of the project and put this in it:
 
 ```
 {
-    "arrowParens": "always",
-    "semi": true,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "all"
-  }
+  "arrowParens": "always",
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all"
+}
 ```
 
 ### Add some scripts

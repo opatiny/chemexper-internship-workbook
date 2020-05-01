@@ -19,6 +19,9 @@ Modifies `package.json`to add the package (and its version) to the dev dependenc
 npm i aPackage --save-dev
 ```
 
+## `npm init`
+To create a `package.json` file in a new Node.js project.
+
 ## Jump to a package doc from command line: `npm home ...`
 
 ```bash
