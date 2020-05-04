@@ -184,3 +184,13 @@ published my first package on npm: `cheminfo/mgf-parser`
     - accessed the db server from node
     - stored the temperature of my computer's cores in the db
     - wrote debug messages to see last entries of the db
+
+### 2020.05.04 - w6
+
+- having troubles with computer not wanting to boot because it was trying to mount servers
+    - had to boot on rescue version (second to last)
+    - went to `etc/rc.d/rc.local` and added an `exit;` after the file type line
+    - reboot
+- learning new influxdb commands -> how to filter measurement entries
+- installed node RED and started learning how to use it
+    - started working on telegram weather forecast bot
