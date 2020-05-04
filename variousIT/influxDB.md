@@ -52,6 +52,13 @@ DROP DATABASE newDB
 ```sql
 use newDB
 ```
+
+### Show names of tables in a db
+
+```sql
+SHOW measurements
+```
+
 ### Create a new table in a db
 
 **N.B.**: Tables are called "measurements" in InfluxDB.
@@ -62,7 +69,7 @@ INSERT newTable, col1=1 col2=45
 INSERT newTable, col1=2 col2=44
 ```
 
-### Show table entries
+### Show all table entries
 
 ```sql
 select * from "newTable"
@@ -75,6 +82,24 @@ epoch1        1       45
 epoch2        2       46
 
 Where the time is a time stamp added automatically whenever an entry is added.
+
+## More complex commands
+
+### `WHERE`
+This command shows entries of measurement "tables" of current db which have the "time" property bigger than 1588343586040724334.
+
+```sql
+SELECT * FROM temperatures WHERE time > 1588343586040724334
+```
+
+### `now()` and `mean()`
+
+- `now()` allows you to refer to current time.
+- `mean()` makes the average of the specified entries of a column
+
+```sql
+SELECT MEAN(core1) FROM temperatures WHERE time > now() - 1h
+```
 
 ### Count measurement entries
 
