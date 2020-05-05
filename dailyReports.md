@@ -194,3 +194,11 @@ published my first package on npm: `cheminfo/mgf-parser`
 - learning new influxdb commands -> how to filter measurement entries
 - installed node RED and started learning how to use it
     - started working on telegram weather forecast bot
+
+### 2020.05.05
+
+- debug gh pages of `reference-database`: do not work anymore because of docker
+- worked on node-red telegram bot
+    - HTTP request node
+    - switch node
+    - bot is fetching data on the web page and can show some of it when asked with various commands

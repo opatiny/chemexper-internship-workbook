@@ -22,6 +22,23 @@ alias jx='npx jest --watch'
 
 Open a new bash for the changes to take effect.
 
+## `netstat`
+
+This command gives you loads of information about the status of your computer ports.
+
+### Verify if a specific port is listening
+
+```bash
+sudo netstat -plnt | grep 1880
+```
+
+## `ps aux`
+
+See all running processes. Combine with grep wo look for a specific command:
+```bash
+pas aux | grep node-red
+```
+
 ## `sha`: Verifying if file is corrupted
 
 **SHA**: Secure Hash Algorithms
