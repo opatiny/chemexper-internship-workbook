@@ -202,3 +202,10 @@ published my first package on npm: `cheminfo/mgf-parser`
     - HTTP request node
     - switch node
     - bot is fetching data on the web page and can show some of it when asked with various commands
+
+
+### 2020.05.06
+
+- finished @annoyingWeatherMasterBot
+- learned how to push data to influxdb from node-red
+- started creating a dashboard using nodered dashboard to show past weather data in four cities
