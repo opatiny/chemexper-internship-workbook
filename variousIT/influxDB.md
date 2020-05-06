@@ -47,6 +47,8 @@ CREATE DATABASE newDB
 DROP DATABASE newDB
 ```
 
+**Caution:** Only uppercase, lowercase, underscore and numbers are accepted in db names!
+
 ### Switch to a database
 
 ```sql
