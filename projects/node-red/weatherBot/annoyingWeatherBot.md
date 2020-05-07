@@ -67,8 +67,6 @@ https://api.openweathermap.org/data/2.5/forecast?q={city name}&appid={your api k
 ### Telegram interaction example
 <img src="./weatherBot-interaction.png" alt="./weatherBot-interaction.png" width="50%" class="center">
 
-
-
 ## Links
 - [https://openweathermap.org/](https://openweathermap.org/)
 - node red telegram plugin: [https://www.npmjs.com/package/node-red-contrib-telegrambot](https://www.npmjs.com/package/node-red-contrib-telegrambot)

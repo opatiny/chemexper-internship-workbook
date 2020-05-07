@@ -108,3 +108,20 @@ SELECT MEAN(core1) FROM temperatures WHERE time > now() - 1h
 ```sql
 select count(column) from myMeasurement
 ```
+
+### Sort results by tag
+
+Use `group by` to sort the results of a query by a tag.
+
+```sql
+select * from weather group by "city"
+```
+
+### Multiple tag values in where clause
+
+You can use **regular expressions** in Influx queries using this syntax:
+```sql
+select * from weather where city =~ /denges|lausanne/
+```
+
+Here, `denges` and `lausanne` are the possible `city` tag values for the entry to be returned.

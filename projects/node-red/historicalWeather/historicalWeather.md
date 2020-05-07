@@ -26,6 +26,10 @@ The measurement contains fields and tags.
 - `city`: Location of the measurement
 - `weather`: Weather description in a few words
 
+### Database sample example
+
+<img src="./weather_db_sample.png" alt="./weather_db_sample.png" width="50%" class="center">
+
 ## Dashboard
 
 Node-red package for dashboards: `node-red-dashboard`

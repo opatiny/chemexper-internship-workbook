@@ -53,3 +53,55 @@ Be careful when clicking the option to append query parameters! `msg.payload` sh
 ```
 
 If you want to parse the result, in the case it is a JSON, change the return type of the node to "a parsed JSON object".
+
+### `inject` node run on startup
+
+`inject` node allows you to input a variable on a flow. If you want it to inject a value on node-red startup, check the "Inject once after ... seconds, then" checkbox.
+
+## Context
+[https://nodered.org/docs/user-guide/context](https://nodered.org/docs/user-guide/context)
+
+Node-red context allows to save state variables and share it between nodes/flows without using msg!
+
+### Enabling
+You can enable the context in `settings.json`, by setting the `contextStorage` property to this:
+
+```js
+contextStorage: {
+   default: "memoryOnly",
+   memoryOnly: { module: 'memory' }, // storing values in RAM -> lost if node-red is restarted
+   file: { module: 'localfilesystem' } // storing data to file every 30s -> permanent
+}
+```
+
+### Set a context variable easily
+
+Use the `change` node and add a new property to "flow".
+
+### Set / get context from inside function
+
+Use the following syntax:
+```js
+var myCount = flow.get("count"); // get context variable
+flow.set("count", 123); // set context variable
+```
+
+### Set / get parent context variable
+
+If you are inside of a subflow and want to modify the context of the flow calling the subflow, you have to use the `$parent` variable:
+
+```js
+var myCount = flow.get("$parent.count"); // get context variable of parent
+flow.set("$parent.count", 123); // set context variable of parent
+```
+
+## Plugins/ non-standard nodes
+
+In node-red, all the nodes that you have available are called the "palette". You can add some new nodes by going in Settings -> Manage Palette -> Install.
+
+### Some useful plugins
+
+- `node-red-dashboard`: To build GUI with graphs
+- `node-red-contrib-influxdb`: To read and write to an InfluxDB database
+- `node-red-contrib-telegrambot`: To send / reply to message on Telegram
+- `node-red-contrib-simple-gate`: To block some messages on a flow

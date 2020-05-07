@@ -209,3 +209,12 @@ published my first package on npm: `cheminfo/mgf-parser`
 - finished @annoyingWeatherMasterBot
 - learned how to push data to influxdb from node-red
 - started creating a dashboard using nodered dashboard to show past weather data in four cities
+
+### 2020.05.06
+
+- working on node-red dashboard
+    - learned how to use context
+    - learned subflows
+    - starting flow once on node-red start with `inject` node
+    - use dashboard `ui control` node
+    - used `gate` node to block messages on flow
