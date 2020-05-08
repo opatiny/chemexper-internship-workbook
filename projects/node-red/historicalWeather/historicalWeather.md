@@ -1,8 +1,10 @@
 # Historical weather dashboard
 
+Link: [https://github.com/opatiny/historical-weather-dashboard](https://github.com/opatiny/historical-weather-dashboard)
+
 ## Goal
 
-Store the weather data in Denges in an InfluxDB database and show it in graphs.
+Use **node-red** to store the weather data of 4 cities in an InfluxDB database and show it in a dashboard.
 
 ## Database structure
 
@@ -19,7 +21,7 @@ The measurement contains fields and tags.
 - `humidity`: Humidity in [%]
 - `wind`: Wind speed in [m/s]
 - `rain`: Amount of rain fallen over last hour in [mm]
-- `clouds`: Cloudiness in [%]
+- `clouds`: Cloudiness in [%] (I forgot about this one...)
 
 ### Tags
 
