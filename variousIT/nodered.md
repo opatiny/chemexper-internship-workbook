@@ -105,3 +105,33 @@ In node-red, all the nodes that you have available are called the "palette". You
 - `node-red-contrib-influxdb`: To read and write to an InfluxDB database
 - `node-red-contrib-telegrambot`: To send / reply to message on Telegram
 - `node-red-contrib-simple-gate`: To block some messages on a flow
+- `node-red-node-ui-table`: Display tables in dashboard
+
+## Projects
+
+### Enabling
+
+Node-red projects allow to have version control. They can be enabled in `settings.js`:
+```js
+    editorTheme: {
+        projects: {
+            // To enable the Projects feature, set this value to true
+            enabled: true
+        }
+    }
+```
+
+Once this is done, the next time node-red is restarted, it will ask you if you want to create a project with the current flows. Follow the steps and you will create your first project.
+
+### Add remote
+
+If you want to add a remote GitHub repository to your node-red project, follow this procedure:
+- create new github repository
+- got to "Settings -> Project -> Project Settings -> Settings -> Project remotes" and click on "add remote" -> copy paste the link from the github repo (e.g. ssh://git@github.com:opatiny/historical-weather-dashboard.git)
+- access the project handler in the right sidebar, in the tab with the little branch icon -> this is where you add and commit things
+- in this sidebar, click on "Commit History"
+- On the right, you have a little icon with one arrow up and one arrow down -> this is where you will be able to push/pull
+- this is where you set the remote branch on which you want to commit. Type "master" in the input text field -> it let you create a new remote branch called "origin/master"
+- once the branch is created, you can pull and push changes to github
+
+**Warning:** The file changes are updated only once the flows are deployed!

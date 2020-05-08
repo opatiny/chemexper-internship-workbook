@@ -212,9 +212,18 @@ published my first package on npm: `cheminfo/mgf-parser`
 
 ### 2020.05.06
 
-- working on node-red dashboard
+- working on node-red weather dashboard
     - learned how to use context
     - learned subflows
     - starting flow once on node-red start with `inject` node
     - use dashboard `ui control` node
     - used `gate` node to block messages on flow
+
+### 2020.05.06
+
+- working on node-red weather dashboard
+    - many tabs in the dashboard
+    - node-red projects (-> version control)
+    - node-red tables
+    - node-red dashboard gauges
+    - charts do not work, even basic test case
