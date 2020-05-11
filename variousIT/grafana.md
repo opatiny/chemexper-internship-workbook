@@ -26,4 +26,3 @@ By default, the server opens a connection on port 3000. To access the GUI, type 
 ```bash
 sudo /bin/systemctl stop grafana-server.service
 ```
-
