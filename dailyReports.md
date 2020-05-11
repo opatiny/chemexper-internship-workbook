@@ -189,7 +189,7 @@ published my first package on npm: `cheminfo/mgf-parser`
 
 - having troubles with computer not wanting to boot because it was trying to mount servers
     - had to boot on rescue version (second to last)
-    - went to `etc/rc.d/rc.local` and added an `exit;` after the file type line
+    - opened `etc/rc.d/rc.local` in vi as root and added an `exit;` after the file type line
     - reboot
 - learning new influxdb commands -> how to filter measurement entries
 - installed node RED and started learning how to use it
@@ -202,7 +202,6 @@ published my first package on npm: `cheminfo/mgf-parser`
     - HTTP request node
     - switch node
     - bot is fetching data on the web page and can show some of it when asked with various commands
-
 
 ### 2020.05.06
 
@@ -227,3 +226,9 @@ published my first package on npm: `cheminfo/mgf-parser`
     - node-red tables
     - node-red dashboard gauges
     - charts do not work, even basic test case
+
+### 2020.05.11 - w7
+
+- struggling with node-red charts which do not work
+- created a node-red project for the telegram bot: `weather-bot` (private repo)
+    - had problems with pulling from github through the graphic interface
