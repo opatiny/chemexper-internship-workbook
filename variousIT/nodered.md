@@ -135,3 +135,8 @@ If you want to add a remote GitHub repository to your node-red project, follow t
 - once the branch is created, you can pull and push changes to github
 
 **Warning:** The file changes are updated only once the flows are deployed!
+
+## Problems
+
+- [https://discourse.nodered.org/t/node-red-project-cannot-pull-from-remote-when-repository-is-private/](https://discourse.nodered.org/t/node-red-project-cannot-pull-from-remote-when-repository-is-private/)
+- [https://discourse.nodered.org/t/brave-browser-stored-data-charts-have-too-many-x-labels/26487](https://discourse.nodered.org/t/brave-browser-stored-data-charts-have-too-many-x-labels/26487)

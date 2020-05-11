@@ -233,3 +233,4 @@ published my first package on npm: `cheminfo/mgf-parser`
 - created a node-red project for the telegram bot: `weather-bot` (private repo)
     - had problems with pulling from github through the graphic interface
 - started learning docker
+- finally solved the charts problem in nodered!
