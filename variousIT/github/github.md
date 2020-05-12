@@ -13,7 +13,7 @@ Imagine that you are in the following case: you just finished developing a front
 How to do that?
 
 - verify that your app builds (with relative paths!) and that you can run it from Live Server
-- create a `.github/workflows` folder in your project and copy [deploy.yml](./layouts/deploy.yml) to it
+- create a `.github/workflows` folder in your project and copy [deploy.yml](./deploy.yml) to it
     - this is a template that you should modify with your own data
     - add the file, commit and push
 - create a new access token (if not done yet)
@@ -72,7 +72,7 @@ git merge aBranch # apply all changes of aBranch to master
 
 ## js-docs: Where to put the JS-docs in GitHub
 
-Use the [cheminfo-tools](../js/npmDevPackages) package to generate the docs.
+Use the [cheminfo-tools](../../js/npmDevPackages) package to generate the docs.
 
 In GitHub, go to the project Settings -> Options -> GitHub Pages and set the "Source" to "master branch /docs folder".
 
@@ -82,7 +82,7 @@ Copy the GitHub Pages link, go back to the project main page and paste it next t
 
 You see that tests fail in GitHub when there is a little cross next to the last commit message (see image). By clicking on the cross, you can have all the details of the tests failing.
 
-<img src="./images/github-commit-test-fail.png" alt="./images/github-commit-test-fail.png" width="70%" class="center">
+<img src="./github-commit-test-fail.png" alt="./github-commit-test-fail.png" width="70%" class="center">
 
 ## Unstage last commit
 
@@ -99,5 +99,3 @@ Then, you can for example open an issue and paste the link in it. Once you commi
 ## URL to a file at a certain commit
 
 When browsing in files in GitHub, you can press **y** and the url of the page will change into a unique URL that will always lead to that exact version of the file.
-
-
