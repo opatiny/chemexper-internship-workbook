@@ -36,6 +36,19 @@ http://127.0.0.1:1880/
 
 Double-click on flow name, at the bottom of the tab, click on the "Enabled" or "Disabled" button to toggle state.
 
+### Subflows
+
+Subflows are a group of nodes that appear as one node in the flow in which they are used. You can then do the same ocmplex thing many times by just copy-pasting the subflow node.
+
+#### Create a subflow
+Select some nodes and go to "Settings -> Subflows -> Selection to subflow".
+
+#### Edit a subflow
+
+Double-click on an instance of the subflow. You have a button "Edit subflow template" which appears on the right.
+
+Alternatively, go tho the nodes manager (left sidebar) under the "Subflows" tab and double-click on one of the subflow nodes.
+
 ## Nodes
 
 The nodes are building blocks that you can assemble to build your application. Nodes are connected with wires.
@@ -57,6 +70,10 @@ If you want to parse the result, in the case it is a JSON, change the return typ
 ### `inject` node run on startup
 
 `inject` node allows you to input a variable on a flow. If you want it to inject a value on node-red startup, check the "Inject once after ... seconds, then" checkbox.
+
+### `link in` and `link out`
+
+These two nodes allow you to make virtual links between flows. It is a kind of alternative to sublflows.
 
 ## Context
 [https://nodered.org/docs/user-guide/context](https://nodered.org/docs/user-guide/context)
