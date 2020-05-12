@@ -234,3 +234,13 @@ published my first package on npm: `cheminfo/mgf-parser`
     - had problems with pulling from github through the graphic interface
 - started learning docker
 - finally solved the charts problem in nodered!
+- contributed on the node-red forum
+
+### 2020.05.12
+
+- working on node-red weather dashboard
+    - learned to use links
+    - learned how to show/hide tabs and groups
+- restructured the influxdb database
+    - learned more about retention policies
+    - learned to use continuous queries
