@@ -4,11 +4,33 @@
 
 Docker basically allows you to run some script inside of a closed environment that contains all of the things that it needs to run (like node, sql, ...), without installing these directly on the computer. It is a little bit similar to virtual machines, but a lot lighter.
 
-## Install
+## Getting it to work
 
-Just run `dnf install docker`.
+### Install
+
+You should not use: `dnf install docker docker-compose`. This could provide you with an old version. On recent Fedora, running this command will provide you with `containerd` instead of `docker`. Indeed, it is an alternative that is installed by default on Fedora! I tried to install these default commands and it did not work in the end!
+
+So, what you want is to install is the "community edition" `docker-ce`. If you really want to do this on a Fedora, you have to hack the kernel (there seems to be no other choice)... To do so, follow [this tutorial](https://linuxconfig.org/how-to-install-docker-on-fedora-31).
 
 This will give you the `docker` command.
+
+### Kernel hack: revert to `cgroup` v1
+
+```bash
+sudo dnf install -y grubby
+sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
+sudo reboot
+```
+
+### Start and enable docker
+```bash
+sudo systemctl enable --now docker
+```
+
+Check that it is up and running:
+```bash
+systemctl status docker
+```
 
 ## Commands
 [List of useful commands](https://gist.github.com/bradtraversy/89fad226dc058a41b596d586022a9bd3)
@@ -40,7 +62,7 @@ Create a new container that runs the image `imageName`. If the image is not foun
 - `containerPort`: port number on the container (must be the one that the image needs)
 - `localPort`: port on the local machine, be careful not to have clashes
 - `-d`: detach -> to run in the background
-- `-it`: interactive mode -> attach a terminal session in which logging will be made
+- `-it`: interactive mode (foreground) -> attach a terminal session in which logging will be made
 - `-p`: publish -> the ports exposed and how internal ports are connected to external ones
 - `--name`: gives a name to the container
 

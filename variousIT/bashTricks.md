@@ -1,16 +1,6 @@
 # Various bash tricks / fun things
 
-## `ascii`
-
-The `ascii`command returns a table with ASCII characters in decimal and in hexadecimal.
-
-Install: `dnf install ascii`
-
-## `gnome-terminal`
-
-This command opens a new terminal window in the current working directory.
-
-## Alias: Custom bash command
+## `alias`: Custom bash command
 
 You can easily make an alias, which basically consists in giving a new name to a bash command. You do that in the `~/.bashrc` file as follows:
 
@@ -21,6 +11,35 @@ alias jx='npx jest --watch'
 ```
 
 Open a new bash for the changes to take effect.
+
+## `ascii`
+
+The `ascii`command returns a table with ASCII characters in decimal and in hexadecimal.
+
+Install: `dnf install ascii`
+
+## `dnf`
+
+This command basically allows you to install and manage packages on your os.
+
+### See repository package version
+
+Use the following command to see what version of a package will be installed if you use `dnf install` to install it.
+
+```bash
+dnf provides <packageName>
+```
+
+### Remove package
+
+You must be root to run this.
+```bash
+dnf remove <packageName>
+```
+
+## `gnome-terminal`
+
+This command opens a new terminal window in the current working directory.
 
 ## `netstat`
 

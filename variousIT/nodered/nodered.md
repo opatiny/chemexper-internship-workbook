@@ -157,3 +157,7 @@ If you want to add a remote GitHub repository to your node-red project, follow t
 
 - [https://discourse.nodered.org/t/node-red-project-cannot-pull-from-remote-when-repository-is-private/](https://discourse.nodered.org/t/node-red-project-cannot-pull-from-remote-when-repository-is-private/)
 - [https://discourse.nodered.org/t/brave-browser-stored-data-charts-have-too-many-x-labels/26487](https://discourse.nodered.org/t/brave-browser-stored-data-charts-have-too-many-x-labels/26487)
+
+## Links
+
+- [Dockerize node-red project](https://nodered.org/docs/getting-started/docker)

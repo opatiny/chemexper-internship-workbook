@@ -244,3 +244,5 @@ published my first package on npm: `cheminfo/mgf-parser`
 - restructured the influxdb database
     - learned more about retention policies
     - learned to use continuous queries
+
+### 2020.05.13
