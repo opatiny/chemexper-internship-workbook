@@ -246,3 +246,8 @@ published my first package on npm: `cheminfo/mgf-parser`
     - learned to use continuous queries
 
 ### 2020.05.13
+
+- finished node-red weather dashboard
+- started dockerizing weather-bot project
+    - learned to use github submodules
+    - learned to use node-red environment variables

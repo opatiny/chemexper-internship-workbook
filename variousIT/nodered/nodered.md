@@ -24,7 +24,14 @@ You can also use `npx` to run it. Use the `--userDir` option to run nodered in a
 npx node-red --userDir ./
 ```
 
-Once the server is running, you can access the GUI on port 8080:
+If the package is installed globally:
+
+```bash
+node-red
+```
+**NB:** the package files are stored in `~/.node-red/`
+
+Once the server is running, you can access the GUI on port 1880:
 
 ```url
 http://127.0.0.1:1880/
@@ -110,6 +117,25 @@ If you are inside of a subflow and want to modify the context of the flow callin
 ```js
 var myCount = flow.get("$parent.count"); // get context variable of parent
 flow.set("$parent.count", 123); // set context variable of parent
+```
+
+## Environment variables
+
+Environment variables are variables that you can access from anywhere in a node-red project. Their value is set when node-red is started. The command below would start node-red with an environment variable called `ENV_VAR`, set to the value `1234`.
+
+```bash
+ENV_VAR=1234 node_red
+```
+### Set node property to env var
+
+In all nodes, you can call env var by using the syntax: `${ENV_VAR}`.
+
+**Warning:** A node property cannot be an environment variable "concatenated" with something else.
+
+### Access from functions
+
+```js
+let test = env.get("ENV_VAR");
 ```
 
 ## Plugins/ non-standard nodes

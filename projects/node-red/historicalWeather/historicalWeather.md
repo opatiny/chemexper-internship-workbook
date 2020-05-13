@@ -1,6 +1,6 @@
 # Historical weather dashboard
 
-Link: [https://github.com/opatiny/historical-weather-dashboard](https://github.com/opatiny/historical-weather-dashboard)
+Link: [https://github.com/opatiny/weather-dashboard](https://github.com/opatiny/weather-dashboard)
 
 ## Goal
 

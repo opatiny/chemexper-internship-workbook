@@ -78,6 +78,27 @@ In GitHub, go to the project Settings -> Options -> GitHub Pages and set the "So
 
 Copy the GitHub Pages link, go back to the project main page and paste it next to the project description.
 
+## Submodules
+
+### Add a submodule
+
+Run this command inside of the folder where you want the submodule to be:
+```bash
+git submodule add https://github.com/<gitOrganisation>/<repoName>
+```
+
+### Clone project with submodules
+
+```bash
+git clone --recurse-submodules https://github.com/<gitOrganisation>/<repoName>
+```
+
+### Update submodules
+
+```bash
+git submodule update --recursive --remote
+```
+
 ## Tests failing
 
 You see that tests fail in GitHub when there is a little cross next to the last commit message (see image). By clicking on the cross, you can have all the details of the tests failing.

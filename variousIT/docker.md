@@ -6,15 +6,11 @@ Docker basically allows you to run some script inside of a closed environment th
 
 ## Getting it to work
 
-### Install
-
-You should not use: `dnf install docker docker-compose`. This could provide you with an old version. On recent Fedora, running this command will provide you with `containerd` instead of `docker`. Indeed, it is an alternative that is installed by default on Fedora! I tried to install these default commands and it did not work in the end!
-
-So, what you want is to install is the "community edition" `docker-ce`. If you really want to do this on a Fedora, you have to hack the kernel (there seems to be no other choice)... To do so, follow [this tutorial](https://linuxconfig.org/how-to-install-docker-on-fedora-31).
-
-This will give you the `docker` command.
+[docker-ce install tutorial](https://linuxconfig.org/how-to-install-docker-on-fedora-31)
 
 ### Kernel hack: revert to `cgroup` v1
+
+To install docker on a Fedora, you first have to hack the kernel (there seems to be no other choice)... 
 
 ```bash
 sudo dnf install -y grubby
@@ -22,9 +18,28 @@ sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
 sudo reboot
 ```
 
-### Start and enable docker
+### Proper install after hack
+
 ```bash
-sudo systemctl enable --now docker
+dnf install docker docker-compose
+```
+On recent Fedora, running this command will provide you with `containerd` instead of `docker` (it is really weird). Indeed, it is an alternative that is installed by default on Fedora!
+
+This will give you the `docker` and `docker-compose` commands.
+
+### Give permissions to regular user
+
+Do this to run docker without being root:
+
+```bash
+sudo groupadd docker
+udo usermod -aG docker USERNAME
+```
+
+### Start and enable docker
+
+```bash
+systemctl enable --now docker
 ```
 
 Check that it is up and running:
@@ -34,6 +49,34 @@ systemctl status docker
 
 ## Commands
 [List of useful commands](https://gist.github.com/bradtraversy/89fad226dc058a41b596d586022a9bd3)
+
+### Test docker
+
+Runs a test project.
+```bash
+docker run hello-world
+```
+
+### Run a dockerized project
+
+The `--build` option is necessary if you have "local" images that need to be built. Run this command at the level of the `docker-compose.yml` file.
+
+```bash
+docker-compose up --build
+```
+You can quit this by using Ctrl+C.
+
+#### Run in background
+
+```bash
+docker-compose up -d --build
+```
+
+#### Quit image running in background
+
+```bash
+docker-compose down
+```
 
 ### Containers
 #### Show containers
@@ -80,4 +123,9 @@ You have to create a Dockerfile first!
 
 ```bash 
 docker image build imageName .
+```
+
+#### Run and enter an image
+```bash 
+docker-compose exec node-red bash
 ```
