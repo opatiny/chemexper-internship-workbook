@@ -251,3 +251,12 @@ published my first package on npm: `cheminfo/mgf-parser`
 - started dockerizing weather-bot project
     - learned to use github submodules
     - learned to use node-red environment variables
+
+### 2020.05.14
+
+- made `weather-bot` repo public
+- solved credentials encryption problem
+- finished `docker-weather-bot` and deployed it
+- finished `docker-weather-dashboard` and deployed it
+    - learned how to create an influxdb docker instance
+    - learned to run scripts on influxdb image startup
