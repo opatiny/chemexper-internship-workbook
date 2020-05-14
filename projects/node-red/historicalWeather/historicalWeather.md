@@ -6,6 +6,15 @@ Link: [https://github.com/opatiny/weather-dashboard](https://github.com/opatiny/
 
 Use **node-red** to store the weather data of 4 cities in an InfluxDB database and show it in a dashboard.
 
+## Node-red environment variables
+
+The project uses one environment variable: `OWM_ID`. It is the private user key that you get when subscribing to openweathermap. 
+
+Its value must be set when running node-red:
+```bash
+OWM_ID=<value2> node-red
+```
+
 ## Database structure
 
 Node-red package for InfluxDB: `node-red-contrib-influxdb`
@@ -64,16 +73,16 @@ END
 
 ### Database sample example
 
-<img src="./weather_db_sample.png" alt="./weather_db_sample.png" width="60%" class="center">
+<img src="./images/weather_db_sample.png" alt="./images/weather_db_sample.png" width="60%" class="center">
 
 ## Dashboard
 
 Node-red package for dashboards: `node-red-dashboard`
 
 ### Results
-<img src="./historical-weather-dashboard-charts.png" alt="./historical-weather-dashboard-charts.png" width="100%" class="center">
+<img src="./images/historical-weather-dashboard-charts.png" alt="./images/historical-weather-dashboard-charts.png" width="100%" class="center">
 
-<img src="./currentWeatherDashboardTab-render.png" alt="./currentWeatherDashboardTab-render.png" width="55%" class="center">
+<img src="./images/currentWeatherDashboardTab-render.png" alt="./images/currentWeatherDashboardTab-render.png" width="55%" class="center">
 
 ## Links
 
