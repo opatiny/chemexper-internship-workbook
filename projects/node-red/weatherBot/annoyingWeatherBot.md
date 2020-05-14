@@ -4,6 +4,15 @@
 
 Use Node-RED to retrieve weather data from [https://openweathermap.org/](https://openweathermap.org/), and send it to a Telegram group through a bot.
 
+## Node-red environment variables
+
+The project uses two environment variables: `BOT_TOKEN` and `OWM_ID`. `OWM_ID` is the private user key that you get when subscribing to openweathermap. `BOT_TOKEN` is the bothFather token of your telegram bot.
+
+Their value must be set when running node-red:
+```bash
+BOT_TOKEN=<value1> OWM_ID=<value2> node-red
+```
+
 ## Desired API
 
 The bot should accept a bunch of commands beginning with `/`. Each command should return some weather information fetched on OpenWeather.
@@ -62,10 +71,10 @@ https://api.openweathermap.org/data/2.5/forecast?q={city name}&appid={your api k
 ## Results
 
 ### Final node-red flow
-<img src="./weatherBot-v1.png" alt="./weatherBot-v1.png" width="70%" class="center">
+<img src="./images/weatherBot-v1.png" alt="./images/weatherBot-v1.png" width="70%" class="center">
 
 ### Telegram interaction example
-<img src="./weatherBot-interaction.png" alt="./weatherBot-interaction.png" width="50%" class="center">
+<img src="./images/weatherBot-interaction.png" alt="./images/weatherBot-interaction.png" width="50%" class="center">
 
 ## Links
 - [https://openweathermap.org/](https://openweathermap.org/)
