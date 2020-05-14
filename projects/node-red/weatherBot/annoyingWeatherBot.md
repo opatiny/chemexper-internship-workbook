@@ -76,6 +76,10 @@ https://api.openweathermap.org/data/2.5/forecast?q={city name}&appid={your api k
 ### Telegram interaction example
 <img src="./images/weatherBot-interaction.png" alt="./images/weatherBot-interaction.png" width="50%" class="center">
 
+## Docker
+
+Since the repository is a node-red project, we had to create another github repository for the dockerized version of the project. This project is [`docker-weather-bot`](https://github.com/opatiny/docker-weather-bot). `weather-bot` is imported in it as a submodule.
+
 ## Links
 - [https://openweathermap.org/](https://openweathermap.org/)
 - node red telegram plugin: [https://www.npmjs.com/package/node-red-contrib-telegrambot](https://www.npmjs.com/package/node-red-contrib-telegrambot)

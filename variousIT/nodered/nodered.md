@@ -179,6 +179,10 @@ If you want to add a remote GitHub repository to your node-red project, follow t
 
 **Warning:** The file changes are updated only once the flows are deployed!
 
+## Disable encryption
+
+If you have checked the "enable encryption" box when creating the project and you do not which the credentials to be encrypted anymore, start by deleting the credentials file (e.g. `flow_cred.json`). Then go to the `.config.json` file and set `projects.<yourProjectName>.credentialSecret` to false. Start node-red over and deploy some changes. The credentials files will be created again, this time not encrypted.
+
 ## Problems
 
 - [https://discourse.nodered.org/t/node-red-project-cannot-pull-from-remote-when-repository-is-private/](https://discourse.nodered.org/t/node-red-project-cannot-pull-from-remote-when-repository-is-private/)

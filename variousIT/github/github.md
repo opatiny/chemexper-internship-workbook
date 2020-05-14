@@ -99,6 +99,18 @@ git clone --recurse-submodules https://github.com/<gitOrganisation>/<repoName>
 git submodule update --recursive --remote
 ```
 
+### Remove a submodule
+
+Submodules are mentionnend in many places in the `.git` folder of a project, so it is dangerous to go modify the files to delete them if you are unsure of what you are doing.
+
+Procedure:
+```bash
+git submodule deinit <path_to_submodule>
+git rm <path_to_submodule>
+git commit-m "Removed submodule ..."
+rm -rf .git/modules/<path_to_submodule>
+```
+
 ## Tests failing
 
 You see that tests fail in GitHub when there is a little cross next to the last commit message (see image). By clicking on the cross, you can have all the details of the tests failing.
