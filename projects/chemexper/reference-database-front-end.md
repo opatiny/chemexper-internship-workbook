@@ -1,5 +1,7 @@
 # `chemexper/reference-database-front-end`
 
+[Home](../../README.md) | [Projects TOC](../projects.md)
+
 Link (private repo): [https://github.com/cheminfo/reference-database-front-end](https://github.com/cheminfo/reference-database-front-end)
 
 ## Goal

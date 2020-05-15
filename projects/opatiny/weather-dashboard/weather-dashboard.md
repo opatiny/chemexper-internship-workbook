@@ -1,5 +1,8 @@
 # `opatiny/weather-dashboard`
 
+[Home](../../../README.md) | [Projects TOC](../../projects.md)
+
+
 Link: [https://github.com/opatiny/weather-dashboard](https://github.com/opatiny/weather-dashboard)
 
 Use the dashboard: [http://weather.patiny.com](http://weather.patiny.com)

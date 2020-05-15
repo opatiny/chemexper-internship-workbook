@@ -1,5 +1,7 @@
 # `opatiny/react-mol-structures`
 
+[Home](../../README.md) | [Projects TOC](../projects.md)
+
 Link to the repo: [https://github.com/opatiny/react-mol-structures/](https://github.com/opatiny/react-mol-structures/)
 
 Link the the app: [https://opatiny.github.io/react-mol-structures/](https://opatiny.github.io/react-mol-structures/)

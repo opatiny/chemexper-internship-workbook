@@ -1,5 +1,7 @@
 # `cheminfo/mgf-modifier`
 
+[Home](../../README.md) | [Projects TOC](../projects.md)
+
 Link: [https://github.com/cheminfo/mgf-modifier](https://github.com/cheminfo/mgf-modifier)
 
 ## Goal

@@ -1,5 +1,8 @@
 # `opatiny/weather-bot`
 
+[Home](../../../README.md) | [Projects TOC](../../projects.md)
+
+
 Link: [https://github.com/opatiny/weather-bot](https://github.com/opatiny/weather-bot)
 
 ## Goal

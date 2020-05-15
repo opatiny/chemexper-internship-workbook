@@ -1,5 +1,7 @@
 # `cheminfo/mgf-generator`
 
+[Home](../../README.md) | [Projects TOC](../projects.md)
+
 Link: [https://github.com/cheminfo/mgf-generator](https://github.com/cheminfo/mgf-generator)
 
 ## Goal

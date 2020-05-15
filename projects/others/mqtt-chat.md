@@ -1,5 +1,7 @@
 # Chat between two computers using MQTT
 
+[Home](../../README.md) | [Projects TOC](../projects.md)
+
 ## Goal
 
 Create MQTT brocker and two clients on different computers to chat with each other from the CLI.
