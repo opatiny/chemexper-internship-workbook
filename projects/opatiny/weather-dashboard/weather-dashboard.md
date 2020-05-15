@@ -1,6 +1,8 @@
-# Historical weather dashboard
+# `opatiny/weather-dashboard`
 
 Link: [https://github.com/opatiny/weather-dashboard](https://github.com/opatiny/weather-dashboard)
+
+Use the dashboard: [http://weather.patiny.com](http://weather.patiny.com)
 
 ## Goal
 
@@ -80,6 +82,9 @@ END
 Node-red package for dashboards: `node-red-dashboard`
 
 ### Results
+
+The dashboard has been deployed on [http://weather.patiny.com](http://weather.patiny.com).
+
 <img src="./images/historical-weather-dashboard-charts.png" alt="./images/historical-weather-dashboard-charts.png" width="100%" class="center">
 
 <img src="./images/currentWeatherDashboardTab-render.png" alt="./images/currentWeatherDashboardTab-render.png" width="55%" class="center">

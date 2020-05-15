@@ -1,4 +1,6 @@
-# Create a weather Telegram bot
+# `opatiny/weather-bot`
+
+Link: [https://github.com/opatiny/weather-bot](https://github.com/opatiny/weather-bot)
 
 ## Goal
 
