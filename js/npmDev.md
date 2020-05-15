@@ -96,18 +96,10 @@ In `package.json`, replace the `eslintConfig` object (if it exists) by:
 ### Create or replace `.eslintrc.yml`
 If it doesn't exist, create a `.eslintrc.yml` file at the first level of the project.
 
-If your project is a module, this file should already exist and contain:
-```
-extends: cheminfo
-parserOptions:
-  sourceType: module
-``` 
-
-If you are creating a project from scratch, create the file and put this line in it:
-```
+If your project is a module, this file should already exist.If you are creating a project from scratch, create the file. This should be the new contents of the file:
+```yml
 extends: cheminfo
 ``` 
-
 
 ### Create or replace `.prettierrc` file
 

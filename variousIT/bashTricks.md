@@ -77,3 +77,6 @@ sha -2 downloadFile
 ```
 
 This returns the sha256 of your download, compare it with the one given to you by the provider.
+
+## `systemctl`: manage services
+

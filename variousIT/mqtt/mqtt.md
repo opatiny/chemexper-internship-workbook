@@ -77,7 +77,7 @@ Use `ps aux | grep mosquitto` to check if it is actually running. Use `killall m
 
 ### CLI client
 
-These commands come with the mosquitto package. You can use them to send messages between terminals. If you open port 1883 on the firewall of your computer, you can talk between computers on the same LAN.
+These commands come with the mosquitto package. You can use them to send messages between terminals.
 
 #### Subscribe
 
@@ -94,5 +94,3 @@ Publish a message under a given topic (in another terminal than subscriber):
 ```bash
 mosquitto_pub -m "hello world" -t "test"
 ```
-
-#### Open a port on firewall

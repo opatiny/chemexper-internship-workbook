@@ -70,6 +70,40 @@ git checkout master
 git merge aBranch # apply all changes of aBranch to master
 ```
 
+## Contribute to a project that is not yours
+
+### Step 1: fork
+
+Go on the repository's page and click on "fork" (top right). The project will be copied to your organization.
+
+### Step 2: clone
+
+Clone the project you forked. 
+
+### Step 3: create a new branch
+
+Create a new branch in the cloned project and switch to it.
+
+### Step 4: add your changes
+
+Work on your new branch until you are happy and everything works.
+
+
+
+## `hub`
+
+Install the `hub`command and create an alias `git=hub` in .bashrc to be able to clone projects like this:
+```bash
+hub clone <organization>/<repository>
+```
+
+Default `hub protocol is https, you can change this to ssh with:
+```bash
+git config --global hub.protocol ssh
+```
+
+**Note:** You will still be prompted for your credentials the first time you use this.
+
 ## js-docs: Where to put the JS-docs in GitHub
 
 Use the [cheminfo-tools](../../js/npmDevPackages) package to generate the docs.

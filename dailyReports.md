@@ -260,3 +260,10 @@ published my first package on npm: `cheminfo/mgf-parser`
 - finished `docker-weather-dashboard` and deployed it
     - learned how to create an influxdb docker instance
     - learned to run scripts on influxdb image startup
+
+### 2020.05.15
+
+- finished deploying `docker-weather-dashboard` -> gave it a url accessible from the internet
+- started learning mqtt
+    - managed to create an mqtt brocker and chat between 2 computers
+- created a new generator on generator cheminfo (`commonjs`) and made a pull request
