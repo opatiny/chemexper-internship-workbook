@@ -96,3 +96,4 @@ The dashboard has been deployed on [http://weather.patiny.com](http://weather.pa
 
 - Nodered dashboard tutorial: [https://www.youtube.com/watch?v=X8ustpkAJ-U](https://www.youtube.com/watch?v=X8ustpkAJ-U)
 - Node-red charts and influxdb: [https://funprojects.blog/2020/02/01/influxdb-with-node-red/](https://funprojects.blog/2020/02/01/influxdb-with-node-red/)
+- video introducing NodeRed, InfluxDB and Grafana: [https://www.youtube.com/watch?v=JdV4x925au0&list=WL&index=174&t=0s](https://www.youtube.com/watch?v=JdV4x925au0&list=WL&index=174&t=0s)

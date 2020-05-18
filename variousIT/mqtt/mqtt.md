@@ -4,7 +4,7 @@ Default port: 8883
 
 ## Context
 
-MQTT is a communication protocol that is widely used for IoT, because it is easy to add new devices to the network (since all devices only communicate with the brocker).
+MQTT is a communication protocol that is widely used for IoT, because it is easy to add new devices to the network (since all devices only communicate with the broker).
 
 ## Publish / Subscribe
 
@@ -28,16 +28,16 @@ Allows you to get all subtopics of a topic.
 
 **e.g.:** `home/#`
 
-## Brocker
+## Broker
 
-The **brocker** is basically a postman. It receives and sorts all the messages, and forwards them to the devices that are concerned.
+The **broker** is basically a postman. It receives and sorts all the messages, and forwards them to the devices that are concerned.
 
-We will use the mosquito brocker.
+We will use the mosquito broker.
 
 ## Messages
 
 ### Birth
-Special message published whenever connection is established between a client and the brocker.
+Special message published whenever connection is established between a client and the broker.
 
 ### Death
 Special message published before closing a connection.
@@ -56,14 +56,14 @@ They have rising communication overheads. This means higher quality level implie
 
 ## Install and test
 
-### Install brocker
+### Install broker
 ```bash
 sudo apt-get update
 sudo apt-get install mosquitto
 ```
 
-### Start brocker
-Start mosquitto brocker:
+### Start broker
+Start mosquitto broker:
 ```bash
 mosquitto
 ```

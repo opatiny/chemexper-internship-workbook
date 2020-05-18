@@ -265,5 +265,15 @@ published my first package on npm: `cheminfo/mgf-parser`
 
 - finished deploying `docker-weather-dashboard` -> gave it a url accessible from the internet
 - started learning mqtt
-    - managed to create an mqtt brocker and chat between 2 computers
+    - managed to create an mqtt broker and chat between 2 computers
 - created a new generator on generator cheminfo (`commonjs`) and made a pull request
+
+
+### 2020.05.15 - w8
+
+- make small project to learn how to use mqtt from node (`mqtt-chat`)
+- cloned Bioreactor_v4 project and started analyzing arduino code
+    - enhanced some doc
+- cloned bioreactor v5 from hackuarium
+    - checked out how the logs work
+    - understood the parameters system and the serial comm
