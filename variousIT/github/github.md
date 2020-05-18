@@ -86,9 +86,11 @@ Create a new branch in the cloned project and switch to it.
 
 ### Step 4: add your changes
 
-Work on your new branch until you are happy and everything works.
+Work on your new branch until you are happy and everything works. Push to your fork.
 
+### Step 5: pull request
 
+On the GitHub page of the forked project, click on the "Compare and pull request" button.
 
 ## `hub`
 

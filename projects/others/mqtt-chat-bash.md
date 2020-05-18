@@ -1,14 +1,14 @@
-# Chat between two computers using MQTT
+# Chat between two computers from CLI using MQTT
 
 [Home](../../README.md) | [Projects TOC](../projects.md)
 
 ## Goal
 
-Create MQTT brocker and two clients on different computers to chat with each other from the CLI.
+Create MQTT broker and two clients on different computers to chat with each other from the CLI.
 
-## Setup brocker computer
+## Setup broker computer
 
-### Start brocker
+### Start broker
 
 ```bash
 mosquitto
