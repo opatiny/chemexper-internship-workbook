@@ -1,4 +1,4 @@
-# `cheminfo/mgf-generator`
+# cheminfo/mgf-generator
 
 [Home](../../README.md) | [Projects TOC](../projects.md)
 

@@ -1,4 +1,4 @@
-# `mqtt-chat`
+# mqtt-chat
 
 [Home](../../README.md) | [Projects TOC](../projects.md)
 

@@ -1,4 +1,4 @@
-# `opatiny/react-todo-list`
+# opatiny/react-todo-list
 
 [Home](../../README.md) | [Projects TOC](../projects.md)
 

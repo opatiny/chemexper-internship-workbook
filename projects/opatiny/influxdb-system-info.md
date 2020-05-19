@@ -1,4 +1,4 @@
-# `opatiny/influxdb-cores-temperature`
+# opatiny/influxdb-cores-temperature
 
 [Home](../../README.md) | [Projects TOC](../projects.md)
 

@@ -1,4 +1,4 @@
-# `opatiny/react-mol-structures`
+#`opatiny/react-mol-structures
 
 [Home](../../README.md) | [Projects TOC](../projects.md)
 

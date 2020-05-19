@@ -1,4 +1,4 @@
-# `cheminfo/dereplication`
+# cheminfo/dereplication
 
 [Home](../../README.md) | [Projects TOC](../projects.md)
 

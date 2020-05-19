@@ -1,4 +1,4 @@
-# `cheminfo/mgf-parser`
+# cheminfo/mgf-parser
 
 [Home](../../README.md) | [Projects TOC](../projects.md)
 

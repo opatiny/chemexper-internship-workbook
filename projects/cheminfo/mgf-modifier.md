@@ -1,4 +1,4 @@
-# `cheminfo/mgf-modifier`
+# cheminfo/mgf-modifier
 
 [Home](../../README.md) | [Projects TOC](../projects.md)
 

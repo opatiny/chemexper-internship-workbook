@@ -1,4 +1,4 @@
-# `mljs/spectra-processing/xy/align.js`
+# mljs/spectra-processing/xy/align.js
 
 [Home](../../README.md) | [Projects TOC](../projects.md)
 

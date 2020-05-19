@@ -1,4 +1,4 @@
-# `opatiny/weather-bot`
+# opatiny/weather-bot
 
 [Home](../../../README.md) | [Projects TOC](../../projects.md)
 
@@ -76,10 +76,10 @@ https://api.openweathermap.org/data/2.5/forecast?q={city name}&appid={your api k
 ## Results
 
 ### Final node-red flow
-<img src="./images/weatherBot-v1.png" alt="./images/weatherBot-v1.png" width="70%" class="center">
+<img src="./images/weatherBot-v1.png" alt="./images/weatherBot-v1.png" width="90%" class="center">
 
 ### Telegram interaction example
-<img src="./images/weatherBot-interaction.png" alt="./images/weatherBot-interaction.png" width="50%" class="center">
+<img src="./images/weatherBot-interaction.png" alt="./images/weatherBot-interaction.png" width="800%" class="center">
 
 ## Docker
 

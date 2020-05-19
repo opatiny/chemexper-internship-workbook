@@ -1,4 +1,4 @@
-# `chemexper/reference-database`
+# chemexper/reference-database
 
 [Home](../../README.md) | [Projects TOC](../projects.md)
 

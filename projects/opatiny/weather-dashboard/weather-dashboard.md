@@ -1,4 +1,4 @@
-# `opatiny/weather-dashboard`
+# opatiny/weather-dashboard
 
 [Home](../../../README.md) | [Projects TOC](../../projects.md)
 
