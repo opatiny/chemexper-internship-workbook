@@ -1,4 +1,4 @@
-# Create new generator in `generator-cheminfo`
+# Create new generator in generator-cheminfo
 
 [Home](../../README.md) | [Projects TOC](../projects.md)
 

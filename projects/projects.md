@@ -24,7 +24,7 @@ Table of contents of all the projects that have been worked on.
 
 ### Others
 
-- [Create `commonjs` project generator](./cheminfo/generator-cheminfo_commonjs.md)
+- [Create commonjs project generator](./cheminfo/generator-cheminfo_commonjs.md)
 
 ## Projects to learn new technologies
 
