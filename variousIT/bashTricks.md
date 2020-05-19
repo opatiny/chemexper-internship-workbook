@@ -58,6 +58,14 @@ See all running processes. Combine with grep wo look for a specific command:
 pas aux | grep node-red
 ```
 
+## `screen`
+
+The screen command allows you to interact with devices in serial. To get a list of all your serial devices, got to `/dev`. Generally, external devices names are similar to `ttyACM0`
+
+### Exit screen
+
+The way to exit screen is not very intuitive: you have to type `Ctrl+a` followed with `q`. You will then be asked to confirm that you want to quit the screen.
+
 ## `sha`: Verifying if file is corrupted
 
 **SHA**: Secure Hash Algorithms

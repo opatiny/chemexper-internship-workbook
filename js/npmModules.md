@@ -60,4 +60,4 @@ This will ask you to confirm the bump (version), chose default. The package is p
 
 If you do not have `cheminfo-publish`, this is what you would have to do:
 
-- 
+- ?? ;)>

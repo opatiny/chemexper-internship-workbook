@@ -280,3 +280,6 @@ published my first package on npm: `cheminfo/mgf-parser`
 
 ### 2020.05.19
 
+- reading bioreactor v5 documentation
+- refactoring this project's doc
+- start working on `hackuarium/serial-mqtt-bridge`

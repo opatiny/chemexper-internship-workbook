@@ -5,10 +5,10 @@
 Link to the existing project: [https://github.com/Hackuarium/bioreactor](https://github.com/Hackuarium/bioreactor)
 
 ## Goal
-Understand bioreactor v5 log system and how serial communication works.
+Understand bioreactor v5 log system and how serial monitor works.
 
 ## Context
-We have to understand how the logs of the bioreactor are constructed and how serial communication works in order to make the serial to mqtt "convertor".
+We have to understand how the logs of the bioreactor are constructed and how serial monitor works in order to make the serial to mqtt "convertor".
 
 ## Parameters
 
@@ -48,3 +48,10 @@ Commands composed of one uppercase letter directly followed by an integer allow 
 **Example:** `A123` set value of parameter A to 123
 
 ## Compact logs
+
+### Checksum
+
+The last byte of the compact log (2 hex characters) are a checksum of the rest of the log. The algorithm used is the longitudinal parity check, which uses the XOR operator.
+
+> The simplest checksum algorithm is the so-called **longitudinal parity check**, which breaks the data into "words" with a fixed number n of bits, and then computes the exclusive or (XOR) of all those words. The result is appended to the message as an extra word. To check the integrity of a message, the receiver computes the exclusive or of all its words, including the checksum; if the result is not a word consisting of n zeros, the receiver knows a transmission error occurred.
+> Wikepedia checksum article
