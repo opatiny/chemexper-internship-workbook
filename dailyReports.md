@@ -283,3 +283,15 @@ published my first package on npm: `cheminfo/mgf-parser`
 - reading bioreactor v5 documentation
 - refactoring this project's doc
 - start working on `hackuarium/serial-mqtt-bridge`
+
+### 2020.05.20
+
+- got `hackuarium/serial-mqtt-bridge` to work partially
+    - it listens to bioreactor commands and returns data
+    - tried to implement a function that lists the serial devices, but the library implementing it (cheminfo/serial-requests) seems to be bugged
+- tried to understand js events
+- start working on node-red bioreactor gui
+
+### 2020.05.21-22
+
+Ascension et Pont

@@ -150,6 +150,18 @@ In node-red, all the nodes that you have available are called the "palette". You
 - `node-red-contrib-simple-gate`: To block some messages on a flow
 - `node-red-node-ui-table`: Display tables in dashboard
 
+
+## Add non-standard npm packages
+
+If you want to use an npm package that ain't specific to node-red:
+- open the folder `~/.node-red` in vscode
+- run `npm i <packageName>`
+- add a new property to the `functionGlobalContext` object of `settings.js` similar to this:
+
+```js
+LegoinoUtil:require('legoino-util'),
+```
+
 ## Projects
 
 ### Enabling
@@ -174,7 +186,7 @@ If you want to add a remote GitHub repository to your node-red project, follow t
 - access the project handler in the right sidebar, in the tab with the little branch icon -> this is where you add and commit things
 - in this sidebar, click on "Commit History"
 - On the right, you have a little icon with one arrow up and one arrow down -> this is where you will be able to push/pull
-- this is where you set the remote branch on which you want to commit. Type "master" in the input text field -> it let you create a new remote branch called "origin/master"
+- this is where you set the remote branch on which you want to commit. Type "master" in the input text field -> it lets you create a new remote branch called "origin/master"
 - once the branch is created, you can pull and push changes to github
 
 **Warning:** The file changes are updated only once the flows are deployed!
