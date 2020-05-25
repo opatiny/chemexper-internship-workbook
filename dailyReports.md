@@ -288,10 +288,16 @@ published my first package on npm: `cheminfo/mgf-parser`
 
 - got `hackuarium/serial-mqtt-bridge` to work partially
     - it listens to bioreactor commands and returns data
-    - tried to implement a function that lists the serial devices, but the library implementing it (cheminfo/serial-requests) seems to be bugged
+    - tried to implement a function that lists the serial devices, but the library implementing it (`cheminfo/serial-requests`) seems to be bugged
 - tried to understand js events
 - start working on node-red bioreactor gui
 
 ### 2020.05.21-22
 
 Ascension et Pont
+
+### 2020.05.25 - w9
+
+- tried to understand how `hackuarium/legoino-util` works and added some doc to it
+- tried to enhance the bioreactor ui, but had problems parsing logs
+- enhanced the OpenBio json of `hackuarium/legoino-device-information`

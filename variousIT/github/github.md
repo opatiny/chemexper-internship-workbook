@@ -106,6 +106,17 @@ git config --global hub.protocol ssh
 
 **Note:** You will still be prompted for your credentials the first time you use this.
 
+## Conventional commits
+
+"Conventional commits" is basically a standard syntax for commit messages. You basically add a prefix to your message. These are the one we use:
+- `BREAKING CHANGE:` when you add a breaking change to the API
+- `feat:` when you add a new feature
+- `fix:` when you fix a bug
+- `chore:` when you update stuff, like package.json, or fix syntax
+- `docs:` when adding some documentation
+- `test:` when writing a new test case
+- `refactor:` when you move things around
+
 ## js-docs: Where to put the JS-docs in GitHub
 
 Use the [cheminfo-tools](../../js/npmDevPackages) package to generate the docs.

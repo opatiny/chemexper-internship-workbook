@@ -43,6 +43,8 @@ CREATE DATABASE newDB
 
 ### Delete database
 
+Be careful with this!!!
+
 ```sql
 DROP DATABASE newDB
 ```

@@ -96,7 +96,7 @@ In `package.json`, replace the `eslintConfig` object (if it exists) by:
 ### Create or replace `.eslintrc.yml`
 If it doesn't exist, create a `.eslintrc.yml` file at the first level of the project.
 
-If your project is a module, this file should already exist.If you are creating a project from scratch, create the file. This should be the new contents of the file:
+If your project is a module, this file should already exist. If you are creating a project from scratch, create the file. This should be the contents of the file:
 ```yml
 extends: cheminfo
 ``` 

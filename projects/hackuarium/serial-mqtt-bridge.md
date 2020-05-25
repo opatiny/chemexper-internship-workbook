@@ -1,4 +1,4 @@
-# `hackuarium/serial-mqtt-bridge`
+# hackuarium/serial-mqtt-bridge
 
 [Home](../../README.md) | [Projects TOC](../projects.md)
 

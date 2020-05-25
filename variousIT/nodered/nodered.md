@@ -102,7 +102,7 @@ contextStorage: {
 
 Use the `change` node and add a new property to "flow".
 
-### Set / get context from inside function
+### Set / get context inside a function
 
 Use the following syntax:
 ```js
@@ -203,3 +203,4 @@ If you have checked the "enable encryption" box when creating the project and yo
 ## Links
 
 - [Dockerize node-red project](https://nodered.org/docs/getting-started/docker)
+- [Iterate on array](https://cookbook.nodered.org/basic/operate-on-array)
