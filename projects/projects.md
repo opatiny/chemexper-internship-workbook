@@ -38,5 +38,5 @@ Table of contents of all the projects that have been worked on.
 
 ## Bioreactor related
 
-- [Understand serial communication and logs](./hackuarium/understand-bioreactor-v5.md)
-- [Serial to MQTT bridge](./hackuarium/serial-mqtt-bridge.md)
+- [Understand serial communication and logs](./bioreactor/understand-bioreactor-v5.md)
+- [Serial to MQTT bridge](./bioreactor/serial-mqtt-bridge.md)
