@@ -301,3 +301,9 @@ Ascension et Pont
 - tried to understand how `hackuarium/legoino-util` works and added some doc to it
 - tried to enhance the bioreactor ui, but had problems parsing logs
 - enhanced the OpenBio json of `hackuarium/legoino-device-information`
+
+### 2020.05.26
+
+- followed 3 cheminformatics presentations (paper search engines, datawarrior, references managers)
+- worked on `hackuarium/legoino-util` and fixed `hackuarium/legoino-device-information` (added not defined parameters)
+- continued working on `hackuarium/nodered-bioreactor-gui`
