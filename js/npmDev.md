@@ -1,5 +1,9 @@
 # NPM developer command and packages
 
+## `npm ls`
+
+You can use `npm ls` to see a tree of all the dependencies of a project. You can also specify a package name after the command to see one specific dependency.
+
 ## Run tests
 ### `jest`
 To run tests and check that the code works:

@@ -307,3 +307,10 @@ Ascension et Pont
 - followed 3 cheminformatics presentations (paper search engines, datawarrior, references managers)
 - worked on `hackuarium/legoino-util` and fixed `hackuarium/legoino-device-information` (added not defined parameters)
 - continued working on `hackuarium/nodered-bioreactor-gui`
+
+### 2020.05.27
+
+- continued fixing functions and options of `hackuarium/legoino-util`
+- continued working on `hackuarium/nodered-bioreactor-gui`
+    - managed to display the current settings
+    - basic database logging works!

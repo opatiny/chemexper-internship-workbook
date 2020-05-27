@@ -16,8 +16,15 @@ Building a functional and practical user interface to manage the bioreactors is 
 
 We want to store the parsed logs in an InfluxDB database called `bioreactors`. Each bioreactor should have its own measurement called `bio_<bioreactorID>`.
 
+## Serial commands
+
+The useful serial commands of the bioreactor are:
+- `lm`: for multilog, follow it with a number that indicate from which log you want to retrieve the data
+- `uc`: to retrieve the current settings
+
 ## Packages used
 
-- `legoino-util`: to parse the logs
+- `legoino-util`: to parse the logs (installed as a global variable)
+- `node-red-contrib-loop-processing`: to loop over nodes
 
 ## Links
