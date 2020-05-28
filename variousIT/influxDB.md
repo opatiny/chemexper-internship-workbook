@@ -15,17 +15,29 @@ Configuration files: `/etc/influxdb/influxdb.conf`
 Inside of the previously downloaded folder: 
 
 ```bash
-./influxd
+./usr/bin/influxd
 ```
 
 ### Start client
 Inside of the previously downloaded folder: 
 
 ```bash
-./influx
+./usr/bin/influx
 ```
 
 To kill the client: `quit`.
+
+### General notions
+
+### Time units
+
+These are the possible time units in Influx: "ns" | "u" | "µ" | "ms" | "s" | "m" | "h" | "d" | "w"
+
+### Timestamps
+
+Each entry must have a timestamp.
+
+**Warning:** Be very careful, Influx timestamps are in **nanoseconds**!!!
 
 ## Basic commands
 
@@ -67,11 +79,13 @@ SHOW measurements
 
 **N.B.**: Tables are called "measurements" in InfluxDB.
 
-The two lines underneath create a new table called `newTable` in current database with two columns `col1` and `col2`.
+The two lines underneath create a new table called `newTable` in current database with two **fields** `col1` and `col2`.
 ```sql
-INSERT newTable, col1=1 col2=45
-INSERT newTable, col1=2 col2=44
+INSERT newTable col1=1,col2=45
+INSERT newTable col1=2,col2=44
 ```
+
+Refer to [this doc](https://influxdbcom.readthedocs.io/en/latest/content/docs/v0.9/write_protocols/write_syntax/) for more information about the syntax of these commands!
 
 ### Delete table from a db
 ```sql
@@ -93,6 +107,13 @@ epoch2        2       46
 Where the time is a time stamp added automatically whenever an entry is added.
 
 ## More complex commands
+
+### Set timestamp to UTC format
+
+To set timestamps to be in UTC format, just type this command:
+```sql
+precision rfc3339
+```
 
 ### `WHERE`
 This command shows entries of measurement "tables" of current db which have the "time" property bigger than 1588343586040724334.
@@ -153,7 +174,7 @@ WHERE time > now() - <someAmountOfTime> and time < now()
 GROUP BY  * 
 ```
 
-RP is the retention policy name, by default `autogen`.
+`<RP>` is the retention policy name, by default `autogen`.
 
 The time `WHERE` clause is used if the db is really large, so that you copy it part by part. You should run this command many times, changing the time slot every time.
 
@@ -182,22 +203,43 @@ Often, you don't want to keep as many data points for old data as for the most r
 
 ### Definition
 
-Continuous queries are queries which are run inside of the databases. They will continuously take data from one db, process it, and put it in another db.
+**Continuous queries** are queries which are run inside of the databases. They will continuously take data from one db, process it, and put it in another db.
 
 So when you want to down-sample data from a db, you want to create a short-term db with a short retention policy, and a long-term db that will take the data from the first one and aggregate it, using a continuous query.
 
-only keep the average values over 1h time spans for entries older than a day
+### Tricky things
+
+- Nothing will happen if you run the same CQ command multiple times.
+- Continuous queries only act on data added after they are run.
+- Continuous queries only work for data point which time is close to current time!
 
 ### Create a CQ
 
-Here, entries of the `short_term` db are aggregated by 15m time slots and put in an measurement `new_measurement` that is in the `long_term` db.
+Here, entries of the `short_term` db are aggregated by 15m time slots and put in a measurement `new_measurement` that is in the `long_term` db (must already exist!).
+
 ```sql
 CREATE CONTINUOUS QUERY CQ_name ON long_term
 BEGIN
   SELECT max(column_name) AS long_term_column_name 
   INTO long_term.autogen.new_measurement 
-  FROM short_term.autogen.measurement_name
+  FROM short_term.autogen.measurement_name 
   GROUP BY time(15m), * 
+END
+```
+
+### CQ that automatically downsamples all measurements and numerical fields
+
+Refer to [this link](https://docs.influxdata.com/influxdb/v1.8/query_language/continuous_queries/) for more info!
+
+The following CQ will aggregate by hour all numerical fields of all measurements of `db` and put the results in a db called `downsampled_db` (which must already exist!).
+
+```sql
+CREATE CONTINUOUS QUERY "cq_name" ON "db"
+BEGIN
+  SELECT mean(*) 
+  INTO "downsampled_db"."autogen".:MEASUREMENT 
+  FROM /.*/ 
+  GROUP BY time(1h),*
 END
 ```
 
@@ -220,6 +262,19 @@ In the folder where Influx is installed:
 ```bash
 tail -f ./var/log/messages | grep "Finished continuous"
 ```
+
+## Back-references
+
+### Definition
+Sort of variable name that allows you to refer to all entities matching a regular expression, which is defined after the variable use.
+
+### Example
+
+```aql
+INTO <database_name>.<retention_policy_name>.:MEASUREMENT FROM /<regular_expression>/
+```
+
+`:MEASUREMENT` is a **back-reference** to each measurement matched in the regular expression of the FROM clause.
 
 ## Links
 
