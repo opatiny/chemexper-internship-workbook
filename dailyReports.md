@@ -314,3 +314,12 @@ Ascension et Pont
 - continued working on `hackuarium/nodered-bioreactor-gui`
     - managed to display the current settings
     - basic database logging works!
+
+### 2020.05.28
+
+- worked all day on `hackuarium/nodered-bioreactor-gui`
+    - db logging works
+    - implemented two continuous queries for hourly and daily aggregation
+    - implemented popup to notify when device time is wrong
+    - implemented "update" time button
+- meeting with Columbia on bioreactor project
