@@ -323,3 +323,8 @@ Ascension et Pont
     - implemented popup to notify when device time is wrong
     - implemented "update" time button
 - meeting with Columbia on bioreactor project
+
+### 2020.05.29
+
+- finally got continuous queries to work for bioreactor gui
+- worked on `hackuarium/nodered-bioreactor-gui` and started showing charts of the logs
