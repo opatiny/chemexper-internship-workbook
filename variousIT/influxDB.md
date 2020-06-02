@@ -234,11 +234,11 @@ Refer to [this link](https://docs.influxdata.com/influxdb/v1.8/query_language/co
 The following CQ will aggregate by hour all numerical fields of all measurements of `db` and put the results in a db called `downsampled_db` (which must already exist!).
 
 ```sql
-CREATE CONTINUOUS QUERY "cq_name" ON "db"
+CREATE CONTINUOUS QUERY cq_name ON db
 BEGIN
   SELECT mean(*) 
-  INTO "downsampled_db"."autogen".:MEASUREMENT 
-  FROM /.*/ 
+  INTO downsampled_db.autogen.:MEASUREMENT 
+  FROM db.autogen./.*/ 
   GROUP BY time(1h),*
 END
 ```

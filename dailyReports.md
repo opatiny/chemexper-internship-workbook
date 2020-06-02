@@ -328,3 +328,15 @@ Ascension et Pont
 
 - finally got continuous queries to work for bioreactor gui
 - worked on `hackuarium/nodered-bioreactor-gui` and started showing charts of the logs
+
+## June
+
+### 2020.06.01 - w10
+
+Pentecôte
+
+### 2020.06.02
+
+- soldered 4 temperature probes
+- worked on bioreactor gui
+- started setting up an rpi v4 with touchscreen to act as the bioreactors monitor
