@@ -31,6 +31,11 @@ node-red
 ```
 **NB:** the package files are stored in `~/.node-red/`
 
+You can also run the server in safe mode (all flows stopped) by using:
+```bash
+node-red --safe
+```
+
 Once the server is running, you can access the GUI on port 1880:
 
 ```url
@@ -82,6 +87,7 @@ If you want to parse the result, in the case it is a JSON, change the return typ
 
 These two nodes allow you to make virtual links between flows. It is a kind of alternative to sublflows.
 
+**Warning:** You cannot put link nodes in subflows!
 ## Context
 [https://nodered.org/docs/user-guide/context](https://nodered.org/docs/user-guide/context)
 

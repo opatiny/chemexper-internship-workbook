@@ -88,6 +88,15 @@ The useful serial commands of the bioreactor are:
 - `uc`: to retrieve the current settings
 - `o`: one-wire info -> allows to debug the temperature probe
 
+## Debug system
+
+We developed a system that allows the user to inspect the last 100 debug messages of the GUI. The debug messages are set using `msg.debug` and the `debug` subflow.
+
+The input `msg.debug` object should have properties:
+- `id`: the device id
+- `type`: the message type
+- `message`: the debug message
+
 ## Packages used
 
 - `legoino-util`: to parse the logs (installed as a global variable)
