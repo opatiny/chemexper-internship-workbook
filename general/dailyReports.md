@@ -340,3 +340,5 @@ Pentecôte
 - soldered 4 temperature probes
 - worked on bioreactor gui
 - started setting up an rpi v4 with touchscreen to act as the bioreactors monitor
+
+### 2020.06.03
