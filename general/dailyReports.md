@@ -342,3 +342,7 @@ Pentecôte
 - started setting up an rpi v4 with touchscreen to act as the bioreactors monitor
 
 ### 2020.06.03
+
+- enhanced bioreactor GUI
+    - worked on a new tab dor debug
+- refactored this documentation
