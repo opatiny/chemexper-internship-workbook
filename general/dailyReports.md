@@ -346,3 +346,7 @@ Pentecôte
 - enhanced bioreactor GUI
     - worked on a new tab dor debug
 - refactored this documentation
+
+### 2020.06.04
+
+- having troubles with bioreactor board crashing after some time connected to the GUI
