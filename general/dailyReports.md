@@ -350,3 +350,7 @@ Pentecôte
 ### 2020.06.04
 
 - having troubles with bioreactor board crashing after some time connected to the GUI
+- tried to install the bioreactor gui from scratch on a MacOS
+- tried to inspect the code of the bioreactor to debug (sleep and pid problems)
+    - installed arduino extension on vscode and tried programming the bioreactors -> got errors while verifying the code!
+- meeting with Camilo to talk about node-red and bioreactor gui

@@ -14,7 +14,7 @@ To open vscode settings, type shift+cmd+p and type "Preferences: Open Workspace 
 
 ## Commands
 
-Use shift+cmd+p to access commands menu.
+Use shift+cmd+p to access commands menu.    
 
 - Arduino: Change Board Type
 - Arduino: Select Serial Port
