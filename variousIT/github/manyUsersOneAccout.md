@@ -1,4 +1,6 @@
-# How to push as a given user on the same accout
+# How to push as a given user on the same account
+
+Link: [https://gist.github.com/jexchan/2351996](https://gist.github.com/jexchan/2351996)
 
 All this without using https.
 
@@ -47,7 +49,7 @@ Host github.com-<user2>
 ## Clone repo using custom Host variable
 
 ```bash
-git clone git@github.com-opatiny:opatiny/gfs.git
+git clone git@github.com-opatiny:opatiny/<repoName>.git
 ```
 
 ## Modify git config
