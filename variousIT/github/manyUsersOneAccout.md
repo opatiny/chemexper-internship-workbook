@@ -4,7 +4,7 @@ All this without using https.
 
 ## Create new ssh key
 
-Create an ssh key called `id_rsa_opatiny` (`opatiny` is the username):
+Create an ssh key called `id_rsa_opatiny` (`opatiny` is the username, you should call it whatever you want):
 
 ```bash
 ssh-keygen -t rsa -C "oceane@patiny.com"
@@ -22,9 +22,13 @@ List identities:
 ssh-add -l
 ```
 
+## Add ssh public key to Github account
+
+Go to `~/.ssh/` and copy `id_rsa_opatiny` to your clipboard. Go to your github account -> "Settings" -> "SSH and GPG keys" and create a new SSH key.
+
 ## Create / modify ssh config
 
-Create a `~/.ssh/config` file.
+Create a `~/.ssh/config` file and adapt the code underneath to your needs:
 
 ```bash
 # opatiny account
