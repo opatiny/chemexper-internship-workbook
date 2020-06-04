@@ -4,17 +4,25 @@ All this without using https.
 
 ## Create new ssh key
 
-Create a key called `id_rsa_oceane`:
+Create an ssh key called `id_rsa_opatiny` (`opatiny` is the username):
 
 ```bash
 ssh-keygen -t rsa -C "oceane@patiny.com"
 ```
 
-Add identity:
+Add identity (?):
 
 ```bash
-ssh-add id_rsa_oceane
+ssh-add id_rsa_opatiny
 ```
+
+List identities:
+
+```bash
+ssh-add -l
+```
+
+## Create / modify ssh config
 
 Create a `~/.ssh/config` file.
 
@@ -23,11 +31,30 @@ Create a `~/.ssh/config` file.
 Host github.com-opatiny
 	HostName github.com
 	User git
-	IdentityFile ~/.ssh/id_rsa_oceane
+	IdentityFile ~/.ssh/id_rsa_opatiny
 
-# lpatiny account
-Host github.com-lpatiny
+# <user2> account
+Host github.com-<user2>
 	HostName github.com
 	User git
-	IdentityFile ~/.ssh/id_rsa
+	IdentityFile ~/.ssh/id_rsa_<user2>
 ```
+
+## Clone repo using custom Host variable
+
+```bash
+git clone git@github.com-opatiny:opatiny/gfs.git
+```
+
+## Modify git config
+
+These commands have to be run inside of the cloned repo. They only change name and email locally. Use `--global` option for global changes.
+
+```bash
+git config user.name "Océane Patiny"
+git config user.email "oceane@patiny.com"
+```
+
+## Add / commit / push
+
+You can now work normally inside of the repository.
