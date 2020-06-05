@@ -1,5 +1,7 @@
 # Node-RED
 
+[Home](../../README.md)
+
 ## Context
 
 ## Install
@@ -29,9 +31,11 @@ If the package is installed globally:
 ```bash
 node-red
 ```
+
 **NB:** the package files are stored in `~/.node-red/`
 
 You can also run the server in safe mode (all flows stopped) by using:
+
 ```bash
 node-red --safe
 ```
@@ -53,6 +57,7 @@ Double-click on flow name, at the bottom of the tab, click on the "Enabled" or "
 Subflows are a group of nodes that appear as one node in the flow in which they are used. You can then do the same ocmplex thing many times by just copy-pasting the subflow node.
 
 #### Create a subflow
+
 Select some nodes and go to "Settings -> Subflows -> Selection to subflow".
 
 #### Edit a subflow
@@ -71,9 +76,9 @@ Be careful when clicking the option to append query parameters! `msg.payload` sh
 
 ```json
 {
-    "q": "denges",
-    "appid": "blablabla",
-    "units": "metric"
+  "q": "denges",
+  "appid": "blablabla",
+  "units": "metric"
 }
 ```
 
@@ -88,12 +93,15 @@ If you want to parse the result, in the case it is a JSON, change the return typ
 These two nodes allow you to make virtual links between flows. It is a kind of alternative to sublflows.
 
 **Warning:** You cannot put link nodes in subflows!
+
 ## Context
+
 [https://nodered.org/docs/user-guide/context](https://nodered.org/docs/user-guide/context)
 
 Node-red context allows to save state variables and share it between nodes/flows without using msg!
 
 ### Enabling
+
 You can enable the context in `settings.json`, by setting the `contextStorage` property to this:
 
 ```js
@@ -111,9 +119,10 @@ Use the `change` node and add a new property to "flow".
 ### Set / get context inside a function
 
 Use the following syntax:
+
 ```js
-var myCount = flow.get("count"); // get context variable
-flow.set("count", 123); // set context variable
+var myCount = flow.get('count'); // get context variable
+flow.set('count', 123); // set context variable
 ```
 
 ### Set / get parent context variable
@@ -121,8 +130,8 @@ flow.set("count", 123); // set context variable
 If you are inside of a subflow and want to modify the context of the flow calling the subflow, you have to use the `$parent` variable:
 
 ```js
-var myCount = flow.get("$parent.count"); // get context variable of parent
-flow.set("$parent.count", 123); // set context variable of parent
+var myCount = flow.get('$parent.count'); // get context variable of parent
+flow.set('$parent.count', 123); // set context variable of parent
 ```
 
 ## Environment variables
@@ -132,6 +141,7 @@ Environment variables are variables that you can access from anywhere in a node-
 ```bash
 ENV_VAR=1234 node_red
 ```
+
 ### Set node property to env var
 
 In all nodes, you can call env var by using the syntax: `${ENV_VAR}`.
@@ -141,7 +151,7 @@ In all nodes, you can call env var by using the syntax: `${ENV_VAR}`.
 ### Access from functions
 
 ```js
-let test = env.get("ENV_VAR");
+let test = env.get('ENV_VAR');
 ```
 
 ## Plugins/ non-standard nodes
@@ -156,10 +166,10 @@ In node-red, all the nodes that you have available are called the "palette". You
 - `node-red-contrib-simple-gate`: To block some messages on a flow
 - `node-red-node-ui-table`: Display tables in dashboard
 
-
 ## Add non-standard npm packages
 
 If you want to use an npm package that ain't specific to node-red:
+
 - open the folder `~/.node-red` in vscode
 - run `npm i <packageName>`
 - add a new property to the `functionGlobalContext` object of `settings.js` similar to this:
@@ -173,13 +183,14 @@ LegoinoUtil:require('legoino-util'),
 ### Enabling
 
 Node-red projects allow to have version control. They can be enabled in `settings.js`:
+
 ```js
-    editorTheme: {
-        projects: {
-            // To enable the Projects feature, set this value to true
-            enabled: true
-        }
-    }
+editorTheme: {
+  projects: {
+    // To enable the Projects feature, set this value to true
+    enabled: true;
+  }
+}
 ```
 
 Once this is done, the next time node-red is restarted, it will ask you if you want to create a project with the current flows. Follow the steps and you will create your first project.
@@ -187,6 +198,7 @@ Once this is done, the next time node-red is restarted, it will ask you if you w
 ### Add remote
 
 If you want to add a remote GitHub repository to your node-red project, follow this procedure:
+
 - create new github repository
 - got to "Settings -> Project -> Project Settings -> Settings -> Project remotes" and click on "add remote" -> copy paste the link from the github repo (e.g. ssh://git@github.com:opatiny/historical-weather-dashboard.git)
 - access the project handler in the right sidebar, in the tab with the little branch icon -> this is where you add and commit things

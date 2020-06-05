@@ -1,5 +1,7 @@
 # Docker
 
+[Home](../README.md)
+
 ## Context
 
 Docker basically allows you to run some script inside of a closed environment that contains all of the things that it needs to run (like node, sql, ...), without installing these directly on the computer. It is a little bit similar to virtual machines, but a lot lighter.
@@ -10,7 +12,7 @@ Docker basically allows you to run some script inside of a closed environment th
 
 ### Kernel hack: revert to `cgroup` v1
 
-To install docker on a Fedora, you first have to hack the kernel (there seems to be no other choice)... 
+To install docker on a Fedora, you first have to hack the kernel (there seems to be no other choice)...
 
 ```bash
 sudo dnf install -y grubby
@@ -23,6 +25,7 @@ sudo reboot
 ```bash
 dnf install docker docker-compose
 ```
+
 On recent Fedora, running this command will provide you with `containerd` instead of `docker` (it is really weird). Indeed, it is an alternative that is installed by default on Fedora!
 
 This will give you the `docker` and `docker-compose` commands.
@@ -43,16 +46,19 @@ systemctl enable --now docker
 ```
 
 Check that it is up and running:
+
 ```bash
 systemctl status docker
 ```
 
 ## Commands
+
 [List of useful commands](https://gist.github.com/bradtraversy/89fad226dc058a41b596d586022a9bd3)
 
 ### Test docker
 
 Runs a test project.
+
 ```bash
 docker run hello-world
 ```
@@ -64,6 +70,7 @@ The `--build` option is necessary if you have "local" images that need to be bui
 ```bash
 docker-compose up --build
 ```
+
 You can quit this by using Ctrl+C.
 
 #### Run in background
@@ -79,6 +86,7 @@ docker-compose down
 ```
 
 ### Containers
+
 #### Show containers
 
 ```bash
@@ -111,7 +119,7 @@ Create a new container that runs the image `imageName`. If the image is not foun
 
 #### Stop container
 
-```bash 
+```bash
 docker container stop
 ```
 
@@ -121,11 +129,12 @@ docker container stop
 
 You have to create a Dockerfile first!
 
-```bash 
+```bash
 docker image build imageName .
 ```
 
 #### Run and enter an image
-```bash 
+
+```bash
 docker-compose exec node-red bash
 ```

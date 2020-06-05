@@ -1,5 +1,7 @@
 # Using VS Code Arduino extension
 
+[Home](../../README.md)
+
 ## Context
 
 The bioreactor project is using an Arduino-compatible micro-controller and it has been initially programmed with the [Arduino IDE](https://www.arduino.cc/en/main/software). However, this program is not the best for debugging, for it does not feature auto-completion and good color syntaxing. For these reasons, we want to be able to program Arduino micro-controllers from [VS Code](https://code.visualstudio.com/), which is the IDE we use for all programming projects. VS Code has an extension that serves this purpose.

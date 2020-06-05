@@ -2,7 +2,6 @@
 
 [Home](../../../README.md) | [Projects TOC](../../projects.md)
 
-
 Link: [https://github.com/opatiny/weather-dashboard](https://github.com/opatiny/weather-dashboard)
 
 Use the dashboard: [http://weather.patiny.com](http://weather.patiny.com)
@@ -13,9 +12,10 @@ Use **node-red** to store the weather data of 4 cities in an InfluxDB database a
 
 ## Node-red environment variables
 
-The project uses one environment variable: `OWM_ID`. It is the private user key that you get when subscribing to openweathermap. 
+The project uses one environment variable: `OWM_ID`. It is the private user key that you get when subscribing to openweathermap.
 
 Its value must be set when running node-red:
+
 ```bash
 OWM_ID=<value2> node-red
 ```
@@ -45,34 +45,36 @@ The measurement contains fields and tags.
 ### Continuous queries
 
 3 different measurements:
+
 - `weather`: log data in the measurement every minute
 - `weather_hourly`: query `weather` and aggregate by hour
 - `weather_daily`: query `weather` and aggregate by day
 
 What I initially thought about (retention policy):
+
 - for data >24h, keep 1 entry per hour
 
 ### `weather_hourly` continuous query
 
 ```sql
-CREATE CONTINUOUS QUERY weather_hourly_cq ON weather_db 
-BEGIN 
-  SELECT mean(humidity) AS humidity, mean(rain) AS rain, mean(temp) AS temp, mean(tempFeel) AS tempFeel, mean(wind) AS wind 
-  INTO weather_db.autogen.weather_hourly 
-  FROM weather_db.autogen.weather 
-  GROUP BY time(1h), * 
+CREATE CONTINUOUS QUERY weather_hourly_cq ON weather_db
+BEGIN
+  SELECT mean(humidity) AS humidity, mean(rain) AS rain, mean(temp) AS temp, mean(tempFeel) AS tempFeel, mean(wind) AS wind
+  INTO weather_db.autogen.weather_hourly
+  FROM weather_db.autogen.weather
+  GROUP BY time(1h), *
 END
 ```
 
 ### `weather_daily` continuous query
 
 ```sql
-CREATE CONTINUOUS QUERY weather_daily_cq ON weather_db 
-BEGIN 
-  SELECT mean(humidity) AS humidity, mean(rain) AS rain, mean(temp) AS temp, mean(tempFeel) AS tempFeel, mean(wind) AS wind 
-  INTO weather_db.autogen.weather_daily 
-  FROM weather_db.autogen.weather 
-  GROUP BY time(1d), * 
+CREATE CONTINUOUS QUERY weather_daily_cq ON weather_db
+BEGIN
+  SELECT mean(humidity) AS humidity, mean(rain) AS rain, mean(temp) AS temp, mean(tempFeel) AS tempFeel, mean(wind) AS wind
+  INTO weather_db.autogen.weather_daily
+  FROM weather_db.autogen.weather
+  GROUP BY time(1d), *
 END
 ```
 

@@ -1,5 +1,7 @@
 ## GitHub cheatsheet
 
+[Home](../../README.md)
+
 ## Actions / Workflows
 
 ### Environment variables

@@ -2,7 +2,6 @@
 
 [Home](../../../README.md) | [Projects TOC](../../projects.md)
 
-
 Link: [https://github.com/opatiny/weather-bot](https://github.com/opatiny/weather-bot)
 
 ## Goal
@@ -14,6 +13,7 @@ Use Node-RED to retrieve weather data from [https://openweathermap.org/](https:/
 The project uses two environment variables: `BOT_TOKEN` and `OWM_ID`. `OWM_ID` is the private user key that you get when subscribing to openweathermap. `BOT_TOKEN` is the bothFather token of your telegram bot.
 
 Their value must be set when running node-red:
+
 ```bash
 BOT_TOKEN=<value1> OWM_ID=<value2> node-red
 ```
@@ -76,9 +76,11 @@ https://api.openweathermap.org/data/2.5/forecast?q={city name}&appid={your api k
 ## Results
 
 ### Final node-red flow
+
 <img src="./images/weatherBot-v1.png" alt="./images/weatherBot-v1.png" width="90%" class="center">
 
 ### Telegram interaction example
+
 <img src="./images/weatherBot-interaction.png" alt="./images/weatherBot-interaction.png" width="800%" class="center">
 
 ## Docker
@@ -86,5 +88,6 @@ https://api.openweathermap.org/data/2.5/forecast?q={city name}&appid={your api k
 Since the repository is a node-red project, we had to create another github repository for the dockerized version of the project. This project is [`docker-weather-bot`](https://github.com/opatiny/docker-weather-bot). `weather-bot` is imported in it as a submodule.
 
 ## Links
+
 - [https://openweathermap.org/](https://openweathermap.org/)
 - node red telegram plugin: [https://www.npmjs.com/package/node-red-contrib-telegrambot](https://www.npmjs.com/package/node-red-contrib-telegrambot)

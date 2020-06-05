@@ -1,5 +1,7 @@
 # Various bash tricks / fun things
 
+[Home](../README.md)
+
 ## `alias`: Custom bash command
 
 You can easily make an alias, which basically consists in giving a new name to a bash command. You do that in the `~/.bashrc` file as follows:
