@@ -18,6 +18,24 @@ The `ascii`command returns a table with ASCII characters in decimal and in hexad
 
 Install: `dnf install ascii`
 
+## `brew`
+
+### Install
+
+Refer to [https://brew.sh/](https://brew.sh/).
+
+### `brew list`
+
+List all packages installed with brew.
+
+### `brew info <package>`
+
+Get information about a specific package.
+
+### `brew doctor`
+
+See all warnings related to brew.
+
 ## `dnf`
 
 This command basically allows you to install and manage packages on your os.

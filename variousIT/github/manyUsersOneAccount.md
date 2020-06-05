@@ -1,4 +1,6 @@
-# How to push as a given user on the same account
+# Many GitHub users, one session: how to push
+
+**Goal:** We are many users on the same account on MacOS and want to push to as different GiHub users.
 
 Link: [https://gist.github.com/jexchan/2351996](https://gist.github.com/jexchan/2351996)
 

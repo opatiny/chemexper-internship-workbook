@@ -99,7 +99,7 @@ The input `msg.debug` object should have properties:
 
 ## Packages used
 
-- `legoino-util`: to parse the logs (installed as a global variable)
+- `legoino-util`: to parse the logs (installed as a global variable in settings.js)
 - influxdb
 - gate
 - dashboard
