@@ -5,7 +5,13 @@
 - Basic React.js: creating responsive web applications
 - TailwindCSS: inline CSS styling
 - Node-red: library that allows to program in a graphical interface using boxes
+- JS docs: Writing standard javascript documentation
 - Creating parsers and generators of files (MGF)
+
+## NPM
+
+- Various commands to install, update, remove packages
+- Publish a package to NPM
 
 ## GitHub
 
@@ -29,10 +35,5 @@ InfluxDB is a time series data base.
 
 - Understand how to structure topics
 - Creating an MQTT broker, publisher and subscriber from command line
-- Create MQTT publishers and subscribers from a Javascript program
+- Create MQTT publishers and subscribers from Node.js program
 - Create MQTT publishers and subscribers in Node-Red
-
-## NPM
-
-- Various commands to install, update, remove packages
-- Publish a package to NPM

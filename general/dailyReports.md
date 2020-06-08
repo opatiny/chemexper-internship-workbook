@@ -360,3 +360,11 @@ Pentecôte
 - tried programming arduino with the vscode Arduino extension
 - started learning how to use PlatformIO
 - created new branch in bioreactor project called `platformio` and tried to migrate from Arduino IDE to PlatformIO IDE
+
+### 2020.06.08 - w11
+
+- wrote doc of `legoino-serial-bridge`
+- updated `legoino-mqtt-bridge` (new name for `serial-mqtt-bridge`)
+- working on bioreactor GUI
+  - finally testing the connected devices list handler
+  - trying to solve update time popup  issues
