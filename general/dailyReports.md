@@ -368,3 +368,4 @@ Pentecôte
 - working on bioreactor GUI
   - finally testing the connected devices list handler
   - trying to solve update time popup  issues
+- meeting with columbia to talk about bioreactor
