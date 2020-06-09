@@ -106,10 +106,11 @@ select * from "newTable"
 ```
 
 Showing the `newTable` of `newdb` would look like this:
-
+```
 time col1 col2
 epoch1 1 45
 epoch2 2 46
+```
 
 Where the time is a time stamp added automatically whenever an entry is added.
 

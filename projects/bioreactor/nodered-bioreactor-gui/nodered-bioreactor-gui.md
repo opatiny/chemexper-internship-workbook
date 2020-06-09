@@ -18,7 +18,9 @@ We want to store the parsed logs in an InfluxDB database called `bioreactors`. E
 
 Two other databases contain data aggregated by hours and day. They are called `bioreactors_hour` and `bioreactors_day`.
 
-Warning: The field name "weightSinceLast" is a typo mistake! It should have been "waitSinceLast".
+**Warning:** The field name "weightSinceLast" is a typo mistake! It should have been "waitSinceLast".
+
+One last database called `bioreactors_debug` is used to store the debug messages of the past month.
 
 ### Continuous queries
 
@@ -68,6 +70,14 @@ BEGIN
 END
 ```
 
+### Debug database
+
+The debug database will store the debug messages of the past month. We set its retention policy to be 30 days. The DB contains one measurement called `logs`.
+
+```sqL
+CREATE DATABASE "bioreactors_debug" WITH DURATION 30d REPLICATION 1 SHARD DURATION 1h NAME "oneMonth"
+```
+
 ### Overview
 
 InfluxDB will contain four databases:
@@ -76,8 +86,15 @@ InfluxDB will contain four databases:
 - `bioreactors_minute`: logs aggregated by minute (CQ on `bioreactors`)
 - `bioreactors_hour`: logs aggregated by hour (CQ on `bioreactors`)
 - `bioreactors_day`: logs aggregated by day (CQ on `bioreactors`)
+- `bioreactors_debug`: debug messages of the past 30 days, contains 1 measurement called `logs`
 
 The measurements in these databases have the format `bio_<bioreactorID>`.
+
+The file [`startup.iql`](./layouts/startup.iql) contains all of the Influx commands that have to be run when recreating the database.
+
+### Dumping all logs stored on bioreactor
+
+We consider the "worst" case where a bioreactor has run autonomously for 15 days and has filled its memory. It has then stored 125000 logs. We fetch maximally 64 logs every 10 seconds, which means that it would take about **5.43 hours** to dump all of the logs in the database.
 
 ## Serial commands
 

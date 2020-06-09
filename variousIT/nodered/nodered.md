@@ -90,9 +90,25 @@ If you want to parse the result, in the case it is a JSON, change the return typ
 
 ### `link in` and `link out`
 
-These two nodes allow you to make virtual links between flows. It is a kind of alternative to sublflows.
+These two nodes allow you to make virtual links between flows. It is a kind of alternative to subflows.
 
 **Warning:** You cannot put link nodes in subflows!
+
+### Dashboard `date picker`
+
+This node allows you to chose a date though the GUI. It returns an epoch that refers to the **chosen date and the current time** (aka the time in hh:mm:ss when you validate the date).
+
+This is not very practical, because you might just want the date rounded to midnight. To achieve this, use this hack:
+
+```js
+let roundedDay = new Date(datePickerEpoch - Date.now() % 86400000 + new Date().getTimezoneOffset() * 60000);
+```
+
+### time picker
+
+There is a time picker available in the dashboard, but it is kind of hidden. What you actually have to use is a `text input`  in `time picker` mode.
+
+The output format is the time in [ms] from midnight.
 
 ## Context
 
