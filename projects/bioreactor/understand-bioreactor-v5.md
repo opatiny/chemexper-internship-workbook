@@ -49,9 +49,27 @@ Commands composed of one uppercase letter directly followed by an integer allow 
 
 ## Compact logs
 
-### Checksum
+### [Format](https://hackuarium.github.io/legoino-util/)
+
+A log entry is a hexadecimal line composed of :
+
+- a sequential log ID (8)
+- epoch (8)
+- a list of parameters values (n * 4)
+- a log event ID (4)
+- a log event value (4)
+- a device ID (4)
+- a checkdigit (2)
+
+This means that for 26 parameters, the length of a log is 134 hexadecimal characters (-> 67 bytes).
+
+### Checksum / checkdigit
 
 The last byte of the compact log (2 hex characters) are a checksum of the rest of the log. The algorithm used is the longitudinal parity check, which uses the XOR operator.
 
 > The simplest checksum algorithm is the so-called **longitudinal parity check**, which breaks the data into "words" with a fixed number n of bits, and then computes the exclusive or (XOR) of all those words. The result is appended to the message as an extra word. To check the integrity of a message, the receiver computes the exclusive or of all its words, including the checksum; if the result is not a word consisting of n zeros, the receiver knows a transmission error occurred.
 > Wikepedia checksum article
+
+## Memory autonomy when logging
+
+If the bioreactor saves one log in its 8Mb EEPROM every ten seconds, it should have an autonomy of 15 days or 125'000 logs.
