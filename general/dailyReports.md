@@ -369,3 +369,12 @@ Pentecôte
   - finally testing the connected devices list handler
   - trying to solve update time popup  issues
 - meeting with columbia to talk about bioreactor
+
+### 2020.06.09
+
+- wrote issues based on the meeting of yesterday
+- working on bioreactor gui
+  - implementing date picker for the charts
+  - trying to debug time update
+  - enhanced debug tab
+    - created database to store past 30 days debug messages
