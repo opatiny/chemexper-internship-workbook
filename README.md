@@ -13,7 +13,26 @@ Documentation resulting of my 3 months internship at Chemexper Sprl.
 
 [Click here](./projects/projects.md) to see the table of contents of all the projects.
 
-## Javascript
+## Bioreactor
+
+Contributing to the [open-source bioreactor project](https://hackuarium.github.io/bioreactor/) of the [Hackuarium](http://wiki.hackuarium.ch/w/Main_Page) association was a big part of my internship.
+
+### GitHub repositories
+
+- [Node-red bioreactor GUI](./bioreactor/nodered-bioreactor-gui/nodered-bioreactor-gui.md)
+- [Serial to MQTT bridge](./bioreactor/serial-mqtt-bridge.md)
+
+### Protocols
+
+- [Setting up a Raspberry Pi to monitor bioreactors](./bioreactor/setup-raspberry/setup-raspberry.md)
+- [Setting up bioreactors GUI on MacOS](./bioreactor/bio-gui-install-macos.md)
+
+### General documentation
+
+- [Understand serial communication and logs](./bioreactor/understand-bioreactor-v5.md)
+- [Bioreactors setup overview](./bioreactor/bioreactor-setup-overview.md)
+
+## Javascript doc
 
 - [Javascript programming tricks](./js/jsTricks.md)
 - [Using npm modules](./js/npmModules.md)

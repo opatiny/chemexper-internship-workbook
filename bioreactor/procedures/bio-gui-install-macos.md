@@ -6,6 +6,8 @@ The bioreactor user interface is a fairly complex problem involving Node.js, Nod
 
 Lets see how to install all of this on a MacOS.
 
+In case you are using a linux distribution, you can likely install all things using `brew` with `dnf`.
+
 ## Install or update `brew`
 
 `brew` allows you to install all default packages on MacOS (it is a package manager).
