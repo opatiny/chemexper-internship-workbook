@@ -1,6 +1,6 @@
 # Bioreactors setup overview
 
-[Home](../../README.md) | [Projects TOC](../projects.md)
+[Home](../../README.md)
 
 ## Bioreactors
 

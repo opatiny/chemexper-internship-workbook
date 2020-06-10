@@ -26,10 +26,11 @@ Contributing to the [open-source bioreactor project](https://hackuarium.github.i
 
 - [Setting up a Raspberry Pi to monitor bioreactors](./bioreactor/setup-raspberry/setup-raspberry.md)
 - [Setting up bioreactors GUI on MacOS](./bioreactor/bio-gui-install-macos.md)
+- [Calibrating the weight](./bioreactor/weight-calibration.md)
 
 ### General documentation
 
-- [Understand serial communication and logs](./bioreactor/understand-bioreactor-v5.md)
+- [Understand serial monitor UI](./bioreactor/bioreactor-serial-UI.md)
 - [Bioreactors setup overview](./bioreactor/bioreactor-setup-overview.md)
 
 ## Javascript doc

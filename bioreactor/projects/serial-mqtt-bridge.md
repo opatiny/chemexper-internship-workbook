@@ -1,6 +1,6 @@
 # hackuarium/serial-mqtt-bridge
 
-[Home](../../README.md) | [Projects TOC](../projects.md)
+[Home](../../README.md)
 
 Link: [https://github.com/hackuarium/serial-mqtt-bridge](https://github.com/hackuarium/serial-mqtt-bridge)
 
@@ -15,7 +15,7 @@ This project will serve as an interface between the bioreactors, and the GUI con
 
 We define an MQTT topics standard: each topic sent to the bridge is composed of the device type, followed by a "q" (query) or "a" (answer), followed by the device unique id and finally the command asked for. The packages that will be sent from node-red to the bridge won't have any content. Reading MQTT doc confirmed that it is indeed optional for publish messages.
 
-### Send a command to a serial device
+### Send a command to a seria | [Projects TOC](../projects.md)l device
 
 The query topics format:
 ```bash
