@@ -378,3 +378,11 @@ Pentecôte
   - trying to debug time update
   - enhanced debug tab
     - created database to store past 30 days debug messages
+
+### 2020.06.10
+
+- installed a setup to run long tests on a bioreactor prototype -> to debug PID and test all other functionalities
+- installed a setup to program the raspberry pi -> I have to debug the touchscreen
+  - to think about: we should design a (water-tight) case for the raspberry + touchscreen
+- worked a bit on the bioreactor GUI -> adding a new "Monitor" tab
+- had to update `legoino-device-information` and `legoino-util`
