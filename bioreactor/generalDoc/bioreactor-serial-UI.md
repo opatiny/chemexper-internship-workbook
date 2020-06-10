@@ -1,13 +1,15 @@
-# Understanding bioreactor v5 serial monitor UI
+# Understanding bioreactors serial monitor UI
 
 [Home](../../README.md) | [Projects TOC](../projects.md)
 
 Link to the existing project: [https://github.com/Hackuarium/bioreactor](https://github.com/Hackuarium/bioreactor)
 
 ## Goal
+
 Understand bioreactor v5 log system and how serial monitor works.
 
 ## Context
+
 We have to understand how the logs of the bioreactor are constructed and how serial monitor works in order to make the serial to mqtt "convertor".
 
 ## Parameters
