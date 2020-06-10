@@ -106,9 +106,9 @@ let roundedDay = new Date(datePickerEpoch - Date.now() % 86400000 + new Date().g
 
 ### time picker
 
-There is a time picker available in the dashboard, but it is kind of hidden. What you actually have to use is a `text input`  in `time picker` mode.
+There is a time picker available in the dashboard, but it is kind of hidden. What you actually have to use is a `text input` in `time picker` mode.
 
-The output format is the time in [ms] from midnight.
+The output format is the time in [ms].
 
 ## Context
 
