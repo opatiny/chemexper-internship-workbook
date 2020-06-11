@@ -367,7 +367,7 @@ Pentecôte
 - updated `legoino-mqtt-bridge` (new name for `serial-mqtt-bridge`)
 - working on bioreactor GUI
   - finally testing the connected devices list handler
-  - trying to solve update time popup  issues
+  - trying to solve update time popup issues
 - meeting with columbia to talk about bioreactor
 
 ### 2020.06.09
@@ -386,3 +386,9 @@ Pentecôte
   - to think about: we should design a (water-tight) case for the raspberry + touchscreen
 - worked a bit on the bioreactor GUI -> adding a new "Monitor" tab
 - had to update `legoino-device-information` and `legoino-util`
+
+### 2020.06.11
+
+- got the raspi toughscreen to work
+- enhanced bioreactor-gui
+- had to update `legoino-device-information` and `legoino-util` (again...)
