@@ -6,11 +6,11 @@ Link: [https://github.com/opatiny/nodered-bioreactor-gui](https://github.com/opa
 
 ## Goal
 
-Work on the bioreactors GUI using node-red.
+Create a GUI for the bioreactors using node-red.
 
 ## Context
 
-Building a functional and practical user interface to manage the bioreactors is one of the main goal of my internship. We use node-red to build it in order to make it easier for people with little programming experience to modify the GUI according to their needs.
+Building a functional and practical user interface to manage the bioreactors is one of the main goals of my internship. We use node-red to build it in order to make it easier for people with little programming experience to modify the GUI according to their needs.
 
 ## Database structure
 
@@ -98,11 +98,7 @@ We consider the "worst" case where a bioreactor has run autonomously for 15 days
 
 ## Serial commands
 
-The useful serial commands of the bioreactor are:
-
-- `lm`: to get the multilogs, follow it with a number that indicate from which log id you want to retrieve the data
-- `uc`: to retrieve the current settings
-- `o`: one-wire info -> allows to debug the temperature probe
+The useful serial commands of the bioreactor are described in [bioreactor-commands.md](../generalDoc/bioreactor-commands.md).
 
 ## Debug system
 
@@ -114,6 +110,9 @@ The input `msg.debug` object should have properties:
 - `type`: the message type
 - `message`: the debug message
 
+## Results
+
+
 ## Packages used
 
 - `legoino-util`: to parse the logs (installed as a global variable in settings.js)
@@ -122,15 +121,3 @@ The input `msg.debug` object should have properties:
 - dashboard
 
 **Comment:** MQTT nodes are built in the basic install.
-
-## Results
-
-The GUI is composed of two tabs: _Advanced_ and _Inspect logs_.
-
-The _Advanced_ tab allows you to select one of the serial devices that has been identified as a bioreactor. Once the device is selected, you can see its current settings. This information is updated every second. Additionally, you can send any serial command, as you would from the Arduino IDE serial monitor.
-
-On the other hand, the _Inspect logs_ tab allows you to see the logs stored in the database.Charts that display the liquid temperature and the weight are shown. The user can set the time spans using a dropdown menu.
-
-<img src="./images/bioreactor-gui-advanced.png" alt="./images/bioreactor-gui-advanced.png" width="100%" class="center">
-
-<img src="./images/bioreactor-gui-inspectLogs.png" alt="./images/bioreactor-gui-inspectLogs.png" width="100%" class="center">

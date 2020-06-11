@@ -94,6 +94,15 @@ These two nodes allow you to make virtual links between flows. It is a kind of a
 
 **Warning:** You cannot put link nodes in subflows!
 
+### Function node: debug messages
+
+To print debug messages in the debug tab, they are two functions that you can use inside of the function node:
+
+```js
+node.warn('hey');
+node.error('There is an error!');
+```
+
 ### Dashboard `date picker`
 
 This node allows you to chose a date though the GUI. It returns an epoch that refers to the **chosen date and the current time** (aka the time in hh:mm:ss when you validate the date).
@@ -101,7 +110,11 @@ This node allows you to chose a date though the GUI. It returns an epoch that re
 This is not very practical, because you might just want the date rounded to midnight. To achieve this, use this hack:
 
 ```js
-let roundedDay = new Date(datePickerEpoch - Date.now() % 86400000 + new Date().getTimezoneOffset() * 60000);
+let roundedDay = new Date(
+  datePickerEpoch -
+    (Date.now() % 86400000) +
+    new Date().getTimezoneOffset() * 60000
+);
 ```
 
 ### time picker

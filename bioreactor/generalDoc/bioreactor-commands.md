@@ -8,12 +8,12 @@
 
 For more information, refer to the [serial UI doc](./-bioreactor-serial-UI)
 
-## Commands
+## Most useful commands
 
-- h: help
-- ue: epoch
-- w: weight
-- s: settings
-- uc: current settings compact log
-- lm: multi-log, returns max 64 logs at a time starting from the given log id
-
+- `h`: help
+- `ue`: epoch
+- `w`: weight
+- `s`: settings
+- `uc`: current settings compact log
+- `lm`: multi-log, returns max 64 logs at a time starting from the given log id
+- `o`: one-wire info -> allows to debug the temperature probe

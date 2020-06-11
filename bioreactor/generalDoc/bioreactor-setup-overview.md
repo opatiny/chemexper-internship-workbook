@@ -16,6 +16,6 @@ Between the bridge and the GUI, an MQTT broker must run in order to handle all t
 
 ## GUI
 
-Finally, the GUI can run in a completely different place as where the bioreactors are. It contains an MQTT publisher and an MQTT subscriber. Regularly, the GUI will send messages asking for the last logs of each bioreactor. These logs are then parsed using the [legoino-utils](https://github.com/Hackuarium/legoino-util) project. Finally, they are stored in an InfluxDB database.
+Finally, the GUI can run in a completely different place as where the bioreactors are. It contains an MQTT publisher and an MQTT subscriber. Regularly, the GUI sends messages asking for the last logs of each bioreactor. These logs are then parsed using the [legoino-utils](https://github.com/Hackuarium/legoino-util) project. Finally, they are stored in an InfluxDB database.
 
 On the other hand, a node-red dashboard allows the user to see all the stored data in gauges, charts and tables. Moreover, the user can send commands to every bioreactor on the network, in order to inspect and debug.

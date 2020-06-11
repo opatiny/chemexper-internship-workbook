@@ -10,7 +10,7 @@ Understand bioreactor v5 log system and how serial monitor works.
 
 ## Context
 
-We have to understand how the logs of the bioreactor are constructed and how serial monitor works in order to make the serial to mqtt "convertor".
+We have to understand how the logs of the bioreactor are constructed and how serial monitor works in order to make the serial to mqtt bridge.
 
 ## Parameters
 
@@ -21,10 +21,11 @@ The first 26 parameters are the most important ones. They are stored in an array
 ## Using the serial monitor
 
 If you want to access the bioreactor through the serial monitor:
+
 - plug the main board in your computer with a mini USB cable
 - open the Arduino IDE
 - select the right serial port in Tools -> Port
-- open the serial monitor
+- open the serial monitor and select "Both CR & NL"
 - type h+Enter for help
 
 ## Serial monitor commands
@@ -57,7 +58,7 @@ A log entry is a hexadecimal line composed of :
 
 - a sequential log ID (8)
 - epoch (8)
-- a list of parameters values (n * 4)
+- a list of parameters values (n \* 4)
 - a log event ID (4)
 - a log event value (4)
 - a device ID (4)
