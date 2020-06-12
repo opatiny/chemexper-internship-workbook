@@ -392,3 +392,8 @@ Pentecôte
 - got the raspi toughscreen to work
 - enhanced bioreactor-gui
 - had to update `legoino-device-information` and `legoino-util` (again...)
+
+### 2020.06.12
+
+- started working on two new tabs for the bioreactor GUI: `monitor` and `setup`
+- had a session with Luc and Camilo where we designed an I2C slave PCB
