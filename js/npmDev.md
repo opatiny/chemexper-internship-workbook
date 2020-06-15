@@ -1,5 +1,13 @@
 # NPM developer command and packages
 
+## `npx`
+
+Using the `npx` command followed with the name of a package which is installed locally allows to execute the command. We use it with `jest`, for instance.
+
+```bash
+npx jest
+```
+
 ## `npm ls`
 
 You can use `npm ls` to see a tree of all the dependencies of a project. You can also specify a package name after the command to see one specific dependency.

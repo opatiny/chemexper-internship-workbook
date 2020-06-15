@@ -62,6 +62,48 @@ You actually do not have to do anything in particular! If the ribbon cable is in
 
 So you can just shutdown the Raspberry, then unplug the power, keyboard, HDMI screen and mouse. Finally, power the device up again. You should see the touchscreen lighting up.
 
+## Enable ssh
+
+Just because it is practical.
+
+The doc comes from [here](https://www.raspberrypi.org/documentation/remote-access/ssh/).
+
+- Launch Raspberry Pi Configuration from the Preferences menu
+- Navigate to the Interfaces tab
+- Select Enabled next to SSH
+- Click OK
+
+## Install `nvm` as root
+Open a terminal. The command below installs the last stables versions of node.js and npm.
+
+```bash
+nvm install stable
+```
+
+## Install `pm2`
+
+This packages allows you to run scripts at boot.
+```bash
+npm i pm2 --global
+```
+
+## Running bioreactor UI on startup in full screen
+
+Chromium is the default web browser. You have to edit the file that it executes at boot:
+```bash
+vi /home/pi/.config/autostart/chromium.desktop
+```
+
+Add the following lines to this file:
+```bash
+[Desktop Entry]
+Type=Application
+Name=Chromium
+Exec=chromium-browser --kiosk <urlToGUI>
+```
+
+You should replace `<urlToGUI>` with the url to the graphical interface.
+
 ## Links
 
 - [touch screen keyboard (ribbon cable false in this tutorial!!!)](https://www.instructables.com/id/Raspberry-Pi-Touchscreen-Setup/)
