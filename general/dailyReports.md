@@ -402,3 +402,12 @@ Pentecôte
 
 - worked on bioreactor gui
 - implemented flags parsing in `legoino-util`
+
+### 2020.06.16
+
+- fixed some bugs on the bioreactor GUI
+- tried to work on the issue of the stepper being noisy
+
+TO DO:
+- verify overnight if stepper heats up
+- change resistor to be a little higher? -> so that the stepper has a little more torque

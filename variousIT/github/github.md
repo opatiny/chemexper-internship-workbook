@@ -127,6 +127,24 @@ In GitHub, go to the project Settings -> Options -> GitHub Pages and set the "So
 
 Copy the GitHub Pages link, go back to the project main page and paste it next to the project description.
 
+## Markdown
+
+### [Resize image in issue](https://gist.github.com/uupaa/f77d2bcf4dc7a294d109)
+
+You should use the html-like format and use height and width options like so:
+```
+<img src="https://your-image-url.type" width="100" height="100">
+```
+
+### [Images side by side in MD](https://stackoverflow.com/questions/24319505/how-can-one-display-images-side-by-side-in-a-github-readme-md)
+
+You should create a table and have the images in different rows:
+```
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](https://...Dark.png)  |  ![](https://...Ocean.png)
+```
+
 ## Submodules
 
 ### Add a submodule
