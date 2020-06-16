@@ -1,4 +1,6 @@
-# Bioreactors GUI userguide
+# Bioreactors GUI user-guide
+
+This doc was written on the 2020.06.16, and the interface may have changed significantly since then.
 
 ## General
 

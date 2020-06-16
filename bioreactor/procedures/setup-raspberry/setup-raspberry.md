@@ -99,8 +99,10 @@ Add the following lines to this file:
 [Desktop Entry]
 Type=Application
 Name=Chromium
-Exec=chromium-browser --kiosk <urlToGUI>
+Exec=chromium-browser --kiosk --force-device-scale-factor=0.80 <urlToGUI>
 ```
+
+The `kiosk` option allows to enter full screen. It is a mode where you cannot really see that you are in a browser, and it is difficult to escape. The other option rescales all the contents of the web page, so that it fits the raspi screen a little better.
 
 You should replace `<urlToGUI>` with the url to the graphical interface.
 

@@ -10,7 +10,7 @@ Create a GUI for the bioreactors using node-red.
 
 ## Context
 
-Building a functional and practical user interface to manage the bioreactors is one of the main goals of my internship. We use node-red to build it in order to make it easier for people with little programming experience to modify the GUI according to their needs.
+Building a functional and practical user interface to manage the bioreactors is one of the main goals of my internship. We use node-red dashboard to build it in order to make it easier for people with little programming experience to modify the GUI according to their needs.
 
 ## Database structure
 
@@ -102,7 +102,7 @@ The useful serial commands of the bioreactor are described in [bioreactor-comman
 
 ## Debug system
 
-We developed a system that allows the user to inspect the last 100 debug messages of the GUI. The debug messages are set using `msg.debug` and the `debug` subflow.
+We developed a system that allows the user to inspect the last 100 debug messages of the GUI. The debug messages are set using the `msg.debug` property, the `debug` subflow and a "link out" node.
 
 The input `msg.debug` object should have properties:
 
@@ -110,14 +110,23 @@ The input `msg.debug` object should have properties:
 - `type`: the message type
 - `message`: the debug message
 
-## Results
 
+## Dashboard
+
+### Color
+
+The main color theme of the dashboard is: #dba100
+
+## Results
+<img src="./images/2020.06.15/gui-raspi.JPG" alt="./images/2020.06.15/gui-raspi.JPG" width="80%" class="center">
 
 ## Packages used
 
-- `legoino-util`: to parse the logs (installed as a global variable in settings.js)
-- influxdb
-- gate
-- dashboard
+- `legoino-util`: to parse the logs (installed as a global variable in `settings.js`)
+- `node-red-contrib-influxdb` (v0.4.0): writing/reading influx DB
+- `node-red-contrib-simple-gate` (v0.3.1): block messages of let them through
+- `node-red-dashboard` (v2.22.1)
+- `node-red-node-rbe`(v0.2.9): let message though only if it is different form the previous one
+- `node-red-node-ui-table` (v0.3.1)
 
 **Comment:** MQTT nodes are built in the basic install.
