@@ -34,7 +34,7 @@ Allows you to get all subtopics of a topic.
 
 The **broker** is basically a postman. It receives and sorts all the messages, and forwards them to the devices that are concerned.
 
-We will use the mosquito broker.
+We will use the mosquitto broker.
 
 ## Messages
 
@@ -106,3 +106,6 @@ Publish a message under a given topic (in another terminal than subscriber):
 ```bash
 mosquitto_pub -m "hello world" -t "test"
 ```
+
+## Securing the broker
+

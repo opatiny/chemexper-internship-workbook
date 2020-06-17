@@ -110,7 +110,6 @@ The input `msg.debug` object should have properties:
 - `type`: the message type
 - `message`: the debug message
 
-
 ## Dashboard
 
 ### Color
@@ -122,7 +121,7 @@ The main color theme of the dashboard is: #dba100
 
 ## Packages used
 
-- `legoino-util`: to parse the logs (installed as a global variable in `settings.js`)
+- `legoino-util` (v1.2.0): to parse the logs (installed as a global variable in `settings.js`)
 - `node-red-contrib-influxdb` (v0.4.0): writing/reading influx DB
 - `node-red-contrib-simple-gate` (v0.3.1): block messages of let them through
 - `node-red-dashboard` (v2.22.1)

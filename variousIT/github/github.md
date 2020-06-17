@@ -58,7 +58,7 @@ git rebase master # sync anotherBranch with master
 
 ### Merge two branches
 
-When you merge branches, you want to apply all the changes you have made in one branch to another one. This can often generate conflicts, especially is you have worked on the other branch in the meantime. TO verify that you do not have too many conflicts when merging, you can first sync the two branches using `rebase`.
+When you merge branches, you want to apply all the changes you have made in one branch to another one. This can often generate conflicts, especially is you have worked on the other branch in the meantime. To verify that you do not have too many conflicts when merging, you can first sync the two branches using `rebase`.
 
 Imagine you want to merge `aBranch` with `master`. Firstly:
 ```bash
@@ -144,6 +144,17 @@ Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
 ![](https://...Dark.png)  |  ![](https://...Ocean.png)
 ```
+
+## Merge conflicts
+
+If you have troubles with merging a local git project with the cloud:
+
+- `add` and `commit` your local changes
+- run the command `git rebase`
+- if it tells you that you have conflicts, open the repo in vsCode and check the files with a little blue "c"
+- open each of the files and accept the current or incoming change every time there is a conflict
+- add, commit and push
+- the conflicts are now solved
 
 ## Submodules
 

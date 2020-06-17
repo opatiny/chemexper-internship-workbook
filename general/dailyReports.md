@@ -411,3 +411,10 @@ Pentecôte
 TO DO:
 - verify overnight if stepper heats up
 - change resistor to be a little higher? -> so that the stepper has a little more torque
+
+### 2020.06.17
+
+- minor changes on bioreactor gui
+- tried to install touch keyboard on raspi touchscreen
+- tried to secure the mqtt broker
+

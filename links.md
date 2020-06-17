@@ -2,6 +2,8 @@
 
 ## Various IT
 
+- Latex images generator: [https://tex.cheminfo.org](https://tex.cheminfo.org)
+
 - Regular expressions: [https://www.regular-expressions.info/refcharacters.html](https://www.regular-expressions.info/refcharacters.html)
 
 - Regular expressions exercises and cheatsheet: [http://www.cheminfo.org/flavor/cheminformatics/Utility/RegExp_explorer/index.html](http://www.cheminfo.org/flavor/cheminformatics/Utility/RegExp_explorer/index.html)
