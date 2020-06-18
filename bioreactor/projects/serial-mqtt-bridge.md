@@ -5,6 +5,7 @@
 Link: [https://github.com/hackuarium/serial-mqtt-bridge](https://github.com/hackuarium/serial-mqtt-bridge)
 
 ## Goal
+
 Retrieve data from serial devices when an MQTT message is received with a given topic is received, and publish it as MQTT messages.
 
 ## Context
@@ -18,6 +19,7 @@ We define an MQTT topics standard: each topic sent to the bridge is composed of 
 ### Send a command to a serial device
 
 The query topics format:
+
 ```bash
 bioreactor/q/<id>/<cmd>
 ```
@@ -25,6 +27,7 @@ bioreactor/q/<id>/<cmd>
 ### Query for all connected serial devices
 
 Use the following topic to get a list of all existing serial devices:
+
 ```bash
 bioreactor/q/list
 ```
@@ -32,9 +35,19 @@ bioreactor/q/list
 ### Answer topics
 
 To listen to all the answers of the bridge, subscribe to this topic:
+
 ```
 bioreactor/a/#
 ```
+
+## CLI options
+
+This project uses command line arguments (which are parsed using `yargs`). The following options exist:
+
+- `-t`: device type
+- `-b`: broker address
+- `-u`: username
+- `-P`: password
 
 ## Testing
 
@@ -43,11 +56,13 @@ I tried writing a test to verify that the project works properly, but I have had
 If you want to test the code, you have to start the bridge and an MQTT broker (using `mosquitto`). Then you should create an MQTT publisher and a subscriber.
 
 Create the subscriber:
+
 ```bash
 mosquitto_sub -t 'bioreactor/a/#'
 ```
 
 Publish a message:
+
 ```bash
 mosquitto_pub -t 'bioreactor/q/list' -m ''
 ```
@@ -57,8 +72,10 @@ mosquitto_pub -t 'bioreactor/q/list' -m ''
 - `mqtt`: to publish and subscribe to topics
 - `serial-requests` (OUTDATED): allows to send commands to serial devices
 - `legoino-serial-bridge`: allows to send commands to serial devices
+- `yargs`: parsing CLI arguments
 
 ## Developer bash commands
+
 - `npm start`: run index.js
 - `npm start-dev`: run index.js and show all debug messages
 

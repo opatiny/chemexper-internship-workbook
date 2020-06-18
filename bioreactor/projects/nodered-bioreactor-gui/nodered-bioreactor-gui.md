@@ -1,8 +1,8 @@
 # `opatiny/nodered-bioreactor-gui`
 
-[Home](../../../README.md)  | [Bioreactor TOC](../../bioreactor.md)
+[Home](../../../README.md) | [Bioreactor TOC](../../bioreactor.md)
 
-Link: [https://github.com/opatiny/nodered-bioreactor-gui](https://github.com/opatiny/nodered-bioreactor-gui)
+Link: [https://github.com/Hackuarium/nodered-bioreactor-gui](https://github.com/Hackuarium/nodered-bioreactor-gui)
 
 ## Goal
 
@@ -43,6 +43,7 @@ BEGIN
   SELECT max(error) AS max_error, count(distinct(eventId)) AS count_distinct_eventId, median(grWeight) AS median_grWeight, median(id) AS median_id, median(liquidTemp) as median_liquidTemp, median(maxWeight) AS median_maxWeight, median(minWeight) AS median_minWeight, median(pcbTemp) AS median_pcbTemp, median(pidTemp) AS median_pidTemp, min(status) AS min_status, median(targetTemp) AS median_targetTemp, median(weight) AS median_weight, median(weightSinceLast) AS median_weightSinceLast
   INTO bioreactors_minute.autogen.:MEASUREMENT
   FROM bioreactors.autogen./.*/
+  GROUP BY time(1m), *
 END
 ```
 
@@ -117,6 +118,7 @@ The input `msg.debug` object should have properties:
 The main color theme of the dashboard is: #dba100
 
 ## Results
+
 <img src="./images/2020.06.15/gui-raspi.JPG" alt="./images/2020.06.15/gui-raspi.JPG" width="80%" class="center">
 
 ## Packages used

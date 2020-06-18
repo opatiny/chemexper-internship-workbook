@@ -58,7 +58,7 @@ The screen comes with one ribbon cable, four jumper cables and four screws.
 
 ## Configure Raspberry to use the touchscreen as default screen
 
-You actually do not have to do anything in particular! If the ribbon cable is in the correct orientation (with the text on the OUTSIDE), the screen should be detected automatically.
+You actually do not have to do anything in particular! If the ribbon cable is in the correct orientation (with the text on the OUTSIDE on the curve), the screen should be detected automatically.
 
 So you can just shutdown the Raspberry, then unplug the power, keyboard, HDMI screen and mouse. Finally, power the device up again. You should see the touchscreen lighting up.
 
@@ -74,6 +74,15 @@ The doc comes from [here](https://www.raspberrypi.org/documentation/remote-acces
 - Click OK
 
 ## Install `nvm` as root
+
+Use curl:
+
+```bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+```
+
+## Install `node.js`
+
 Open a terminal. The command below installs the last stables versions of node.js and npm.
 
 ```bash
@@ -83,6 +92,7 @@ nvm install stable
 ## Install `pm2`
 
 This packages allows you to run scripts at boot.
+
 ```bash
 npm i pm2 --global
 ```
@@ -90,11 +100,13 @@ npm i pm2 --global
 ## Running bioreactor UI on startup in full screen
 
 Chromium is the default web browser. You have to edit the file that it executes at boot:
+
 ```bash
 vi /home/pi/.config/autostart/chromium.desktop
 ```
 
 Add the following lines to this file:
+
 ```bash
 [Desktop Entry]
 Type=Application
@@ -104,7 +116,11 @@ Exec=chromium-browser --kiosk --force-device-scale-factor=0.80 <urlToGUI>
 
 The `kiosk` option allows to enter full screen. It is a mode where you cannot really see that you are in a browser, and it is difficult to escape. The other option rescales all the contents of the web page, so that it fits the raspi screen a little better.
 
-You should replace `<urlToGUI>` with the url to the graphical interface.
+You should replace `<urlToGUI>` with the url to the graphical interface. We deployed one on [https://bioreactor.hackuarium.org](https://bioreactor.hackuarium.org).
+
+### Add touch keyboard for when in kiosk mode
+
+Once you enter the kiosk mode on Chromium, it is pretty difficult to quit, and it does not allow you to access the menu and therefore the touch keyboard we installed previously. To solve this issue, you should install the Chrome extension "[Virtual Keyboard](https://chrome.google.com/webstore/detail/virtual-keyboard/pflmllfnnabikmfkkaddkoolinlfninn?hl=en)".
 
 ## Links
 
