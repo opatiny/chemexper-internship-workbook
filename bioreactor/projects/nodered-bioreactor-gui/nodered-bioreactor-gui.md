@@ -1,6 +1,6 @@
 # `opatiny/nodered-bioreactor-gui`
 
-[Home](../../../README.md)
+[Home](../../../README.md)  | [Bioreactor TOC](../../bioreactor.md)
 
 Link: [https://github.com/opatiny/nodered-bioreactor-gui](https://github.com/opatiny/nodered-bioreactor-gui)
 

@@ -1,6 +1,6 @@
 # Installing the bioreactor GUI on MacOS
 
-[Home](../../README.md)
+[Home](../../README.md) | [Bioreactor TOC](../bioreactor.md)
 
 The bioreactor user interface is a fairly complex problem involving Node.js, Node-Red, InfluxDB, Mosquitto and a serial to MQTT bridge.
 

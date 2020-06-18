@@ -1,6 +1,6 @@
 # Setting up a Raspberry Pi to use it as bioreactors monitor
 
-[Home](../../../README.md)
+[Home](../../../README.md) | [Bioreactor TOC](../../bioreactor.md)
 
 ## What you need
 

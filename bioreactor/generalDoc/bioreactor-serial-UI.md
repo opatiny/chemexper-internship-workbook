@@ -1,6 +1,6 @@
 # Understanding bioreactors serial monitor UI
 
-[Home](../../README.md) | [Projects TOC](../projects.md)
+[Home](../../README.md) | [Bioreactor TOC](../bioreactor.md)
 
 Link to the existing project: [https://github.com/Hackuarium/bioreactor](https://github.com/Hackuarium/bioreactor)
 
