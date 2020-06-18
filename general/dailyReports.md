@@ -409,6 +409,7 @@ Pentecôte
 - tried to work on the issue of the stepper being noisy
 
 TO DO:
+
 - verify overnight if stepper heats up
 - change resistor to be a little higher? -> so that the stepper has a little more torque
 
@@ -418,3 +419,10 @@ TO DO:
 - tried to install touch keyboard on raspi touchscreen
 - tried to secure the mqtt broker
 
+### 2020.06.18
+
+- securing mqtt broker works
+- touchscreen keyboard on raspi works
+- deployed the GUI on [https://bioreactor.hackuarium.org](https://bioreactor.hackuarium.org)
+- had to play a bit with docker, which made my head hurt
+- cloned mqtt bridge on the raspi, which works

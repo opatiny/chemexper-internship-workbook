@@ -37,3 +37,10 @@ InfluxDB is a time series data base.
 - Creating an MQTT broker, publisher and subscriber from command line
 - Create MQTT publishers and subscribers from Node.js program
 - Create MQTT publishers and subscribers in Node-Red
+
+## Docker
+
+- find images on Docker Hub
+- Create a basic Dockerfile
+- Create a basic `docker-compose.yml` file
+- Start and stop docker projects

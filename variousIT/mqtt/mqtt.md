@@ -114,12 +114,14 @@ mosquitto_pub -m "hello world" -t "test"
 
 ## Securing the broker
 
+[tutorial](https://medium.com/@shayaman321/how-to-setup-a-secured-mqtt-broker-c43d4acb95bf)
+
 ## Generate username/password
 
 Use the tool `mosquitto_passwd` with option `-c` to generate a new username/password for the broker. You will be prompted to insert a password, which will then be encrypted.
 
 ```
-mosquitto_passwd -c <yourUsername>
+mosquitto_passwd -c /etc/mosquitto/passwd <yourUsername>
 ```
 
 ## Edit mosquitto.conf

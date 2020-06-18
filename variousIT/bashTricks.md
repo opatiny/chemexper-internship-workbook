@@ -20,7 +20,17 @@ The `ascii`command returns a table with ASCII characters in decimal and in hexad
 
 Install: `dnf install ascii`
 
+## `bat`
+
+Displays text files with syntax highlighting. You can make an alias cat = bat.
+
+Install: `dnf install bat`
+
 ## `brew`
+
+## Cellar
+
+The Cellar is the folder in which brew installs all the packages. It is in `/usr/local/`.
 
 ### Install
 
@@ -56,6 +66,18 @@ You must be root to run this.
 
 ```bash
 dnf remove <packageName>
+```
+
+## DNS configuration (`/etc/hosts`)
+
+There is a file that you can modify in order to indicate to your computer where to look for domain name/ip address information in priority. This means that the computer will checkout this file before it asks the DNS to convert domain name to ip address.
+
+The file can be found in `/etc/hosts`.
+
+An example of a line you would find in the file is localhost:
+
+```
+127.0.0.1       localhost
 ```
 
 ## `gnome-terminal`
