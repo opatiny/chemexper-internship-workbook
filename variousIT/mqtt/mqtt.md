@@ -85,9 +85,14 @@ mosquitto -d
 
 Use `ps aux | grep mosquitto` to check if it is actually running. Use `killall mosquitto` to kill the process running in background.
 
-### CLI client
+### CLI clients
 
-These commands come with the mosquitto package. You can use them to send messages between terminals.
+These commands come with the mosquitto package. You can use them to send messages between terminals. They both accept the options:
+
+- `-h`: host -> e.g. mqtt://192.168.1.22
+- `-p`: port
+- `-u`: username
+- `-P`: password
 
 #### Subscribe
 
@@ -109,3 +114,33 @@ mosquitto_pub -m "hello world" -t "test"
 
 ## Securing the broker
 
+## Generate username/password
+
+Use the tool `mosquitto_passwd` with option `-c` to generate a new username/password for the broker. You will be prompted to insert a password, which will then be encrypted.
+
+```
+mosquitto_passwd -c <yourUsername>
+```
+
+## Edit mosquitto.conf
+
+```bash
+cd /etc/mosquitto/mosquitto.conf
+```
+
+After a basic install, this file is just composed of commented lines. You can verify this by using `grep -v '#' mosquitto.conf`. Edit the file so that it contains the following:
+
+```
+allow_anonymous false
+password_file /etc/mosquitto/passwd
+```
+
+## Run broker with specific config file
+
+I had troubles with mosquitto not using mosquitto.conf as the default config file (which is weird). If this happens to you, specify the config file with the `-c` option.
+
+```bash
+mosquitto -c /etc/mosquitto/mosquitto.conf
+```
+
+Running the broker in this way will reject any packages that are not sent with the correct username and password.
