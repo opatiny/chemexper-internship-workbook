@@ -426,3 +426,9 @@ TO DO:
 - deployed the GUI on [https://bioreactor.hackuarium.org](https://bioreactor.hackuarium.org)
 - had to play a bit with docker, which made my head hurt
 - cloned mqtt bridge on the raspi, which works
+
+### 2020.06.19
+
+- continued making little enhancements to the bioreactor gui
+- had troubles with displaying the local date of the client because everything is done on the server with node-red
+- wrote and tested influxdb startup script

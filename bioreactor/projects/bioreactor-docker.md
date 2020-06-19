@@ -18,14 +18,14 @@ Once you cloned the project, you can simply go to the folder and run:
 docker-compose up -d --build
 ```
 
-Use the `--build` option only when necessary, because building is slow.
+Use the `--build` option only when necessary, because building is slow. You have to build only when a Dockerfile is modified.
 
 ## Stopping the project
 
 You might want to do this if you pull some changes from the cloud, then start again.
 
 ```bash
-docker-compose down
+docker-compose stop
 ```
 
 ## Docker images
