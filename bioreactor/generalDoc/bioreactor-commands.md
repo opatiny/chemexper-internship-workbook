@@ -1,6 +1,6 @@
 # Bioreactors useful serial commands
 
-[Home](../../../README.md) | [Bioreactor TOC](../../bioreactor.md)
+[Home](../../README.md) | [Bioreactor TOC](../bioreactor.md)
 
 ## General
 
