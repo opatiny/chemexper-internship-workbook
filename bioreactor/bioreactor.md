@@ -6,16 +6,20 @@ Contributing to the [open-source bioreactor project](https://hackuarium.github.i
 
 ### GitHub repositories
 
-- [Node-red bioreactor GUI](./nodered-bioreactor-gui/nodered-bioreactor-gui.md)
-- [Serial to MQTT bridge](./serial-mqtt-bridge.md)
+- [Serial to MQTT bridge](./projects/serial-mqtt-bridge.md)
+- [Node-red bioreactor GUI](./projects/nodered-bioreactor-gui/nodered-bioreactor-gui.md)
+- [Node-red bioreactor GUI docker](./projects/bioreactor-docker.md)x
 
-### Protocols
+### Procedures
 
-- [Setting up a Raspberry Pi to monitor bioreactors](./setup-raspberry/setup-raspberry.md)
-- [Setting up bioreactors GUI on MacOS](./bio-gui-install-macos.md)
-- [Calibrating the weight](./weight-calibration.md)
+- [Setting up a Raspberry Pi to monitor bioreactors](./procedures/setup-raspberry/setup-raspberry.md)
+- [Setting up bioreactors GUI on MacOS](./procedures/install-bio-gui-macos.md)
+- [Starting the bioreactor GUI (for debug)](./procedures/start-bioreactor-gui.md)
+- [Calibrating the weight cells of the bioreactor](./procedures/weight-calibration.md)
 
 ### General documentation
 
-- [Understand serial monitor UI](./bioreactor-serial-UI.md)
-- [Bioreactors setup overview](./bioreactor-setup-overview.md)
+- [Understand serial monitor UI](./generalDoc/bioreactor-serial-UI.md)
+- [Useful serial commands for the bioreactor](./generalDoc/bioreactor-commands.md)
+- [Bioreactors setup overview](./generalDoc/bioreactor-setup-overview.md)
+- [Using the bioreactors GUI (state in June 2020)](./generalDoc/bio-GUI/bio-GUI.md)
