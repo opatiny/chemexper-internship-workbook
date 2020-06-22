@@ -432,3 +432,9 @@ TO DO:
 - continued making little enhancements to the bioreactor gui
 - had troubles with displaying the local date of the client because everything is done on the server with node-red
 - wrote and tested influxdb startup script
+
+### 2020.06.22 - w13
+
+- continued working on final details of the bioreactors GUI
+  - implemented a button to sync the continuous queries
+- checked out the OpenJS World page and registered for the events that looked nice

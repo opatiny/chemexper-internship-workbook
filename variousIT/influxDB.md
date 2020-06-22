@@ -82,7 +82,7 @@ SHOW measurements
 
 ### Create a new table in a db
 
-**N.B.**: Tables are called "measurements" in InfluxDB.
+**N.B.**: Tables are called "**measurements**" in InfluxDB.
 
 The two lines underneath create a new table called `newTable` in current database with two **fields** `col1` and `col2`.
 
@@ -106,6 +106,7 @@ select * from "newTable"
 ```
 
 Showing the `newTable` of `newdb` would look like this:
+
 ```
 time col1 col2
 epoch1 1 45
@@ -113,6 +114,16 @@ epoch2 2 46
 ```
 
 Where the time is a time stamp added automatically whenever an entry is added.
+
+### Delete measurement entries
+
+Be careful when deleting data...
+
+The following command allows you to delete all entries with a timestamp between `startTime` and `endTime`.
+
+```sql
+delete from yourMeasurement where time > startTime and time < endTime
+```
 
 ## More complex commands
 
@@ -163,7 +174,7 @@ You can use **regular expressions** in Influx queries using this syntax:
 select * from weather where city =~ /denges|lausanne/
 ```
 
-Here, `denges` and `lausanne` are the possible `city` tag values for the entry to be returned.
+Here, `denges` and `lausanne` are the possible `city` tag values for the entry to be returned. The syntax of the accepted values should be a **regular expression**.
 
 ### `SHOW SERIES`
 
@@ -198,7 +209,7 @@ The time `WHERE` clause is used if the db is really large, so that you copy it p
 
 ### Definition
 
-Retention policies define for how long the data in the database should be kept before being discarded. For example, you could delete all data older that a week. By **default**, all data put in an InfluxDB database will be kept "indefinitely". The default retention policy is called `autogen`.
+Retention policies define for how long the data in the database should be kept before being discarded. For example, you could delete all data older than a week. By **default**, all data put in an InfluxDB database will be kept "indefinitely". The default retention policy is called `autogen`.
 
 ### Usage
 
@@ -210,7 +221,9 @@ CREATE DATABASE longterm WITH DURATION 156w
 
 Here, you create a db called `longterm`, in which the last 156 weeks of data are kept.
 
-## Continuous queries - aggregate longterm data
+## Continuous queries - aggregate long term data
+
+[Official doc](https://docs.influxdata.com/influxdb/v1.8/query_language/continuous_queries/)
 
 Often, you don't want to keep as many data points for old data as for the most recent one. When using databases, you can achieve this by using retention policies and continuous queries.
 

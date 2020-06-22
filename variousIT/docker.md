@@ -97,7 +97,7 @@ docker ps
 #### Enter a container
 
 ```bash
-docker container exec containerName bash
+docker exec -it containerName bash
 ```
 
 Opens a bash inside of the container called `containerName`.

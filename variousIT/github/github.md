@@ -16,19 +16,19 @@ How to do that?
 
 - verify that your app builds (with relative paths!) and that you can run it from Live Server
 - create a `.github/workflows` folder in your project and copy [deploy.yml](./deploy.yml) to it
-    - this is a template that you should modify with your own data
-    - add the file, commit and push
+  - this is a template that you should modify with your own data
+  - add the file, commit and push
 - create a new access token (if not done yet)
-    - go to your profile Settings -> Developer settings -> Personal access tokens -> Generate new token
-    - name it and give it access to `public_repo`
-    - don't forget to copy the hash!!! It will be lost otherwise
+  - go to your profile Settings -> Developer settings -> Personal access tokens -> Generate new token
+  - name it and give it access to `public_repo`
+  - don't forget to copy the hash!!! It will be lost otherwise
 - create a new Secret
-    - got to the repository Settings -> Secrets
-    - "Add a new secret" and call it `ACCESS_TOKEN`
-    - save the secret
+  - got to the repository Settings -> Secrets
+  - "Add a new secret" and call it `ACCESS_TOKEN`
+  - save the secret
 - locally, make some minor changes and push them
 - the github pages should be automatically set to the `gh-pages` branch
-    - the app will be built and published to gh pages after every push
+  - the app will be built and published to gh pages after every push
 
 ## Branches
 
@@ -61,15 +61,27 @@ git rebase master # sync anotherBranch with master
 When you merge branches, you want to apply all the changes you have made in one branch to another one. This can often generate conflicts, especially is you have worked on the other branch in the meantime. To verify that you do not have too many conflicts when merging, you can first sync the two branches using `rebase`.
 
 Imagine you want to merge `aBranch` with `master`. Firstly:
+
 ```bash
 git checkout aBranch # go on the branch
 git rebase master # sync aBranch with master
 ```
 
 Only if this works, you can safely merge `aBranch` with `master`:
+
 ```bash
 git checkout master
 git merge aBranch # apply all changes of aBranch to master
+```
+
+## Change message of last pushed commit
+
+In the correct folder:
+
+```bash
+git commit --amend # opens a text editor in which you can change the message of last commit
+git log # check that your changes are correct
+git push --force-with-lease # push only if there have been no changes on the remote in the meantime
 ```
 
 ## Contribute to a project that is not yours
@@ -80,7 +92,7 @@ Go on the repository's page and click on "fork" (top right). The project will be
 
 ### Step 2: clone
 
-Clone the project you forked. 
+Clone the project you forked.
 
 ### Step 3: create a new branch
 
@@ -97,11 +109,13 @@ On the GitHub page of the forked project, click on the "Compare and pull request
 ## `hub`
 
 Install the `hub`command and create an alias `git=hub` in .bashrc to be able to clone projects like this:
+
 ```bash
 hub clone <organization>/<repository>
 ```
 
 Default `hub protocol is https, you can change this to ssh with:
+
 ```bash
 git config --global hub.protocol ssh
 ```
@@ -111,6 +125,7 @@ git config --global hub.protocol ssh
 ## Conventional commits
 
 "Conventional commits" is basically a standard syntax for commit messages. You basically add a prefix to your message. These are the one we use:
+
 - `BREAKING CHANGE:` when you add a breaking change to the API
 - `feat:` when you add a new feature
 - `fix:` when you fix a bug
@@ -132,6 +147,7 @@ Copy the GitHub Pages link, go back to the project main page and paste it next t
 ### [Resize image in issue](https://gist.github.com/uupaa/f77d2bcf4dc7a294d109)
 
 You should use the html-like format and use height and width options like so:
+
 ```
 <img src="https://your-image-url.type" width="100" height="100">
 ```
@@ -139,6 +155,7 @@ You should use the html-like format and use height and width options like so:
 ### [Images side by side in MD](https://stackoverflow.com/questions/24319505/how-can-one-display-images-side-by-side-in-a-github-readme-md)
 
 You should create a table and have the images in different rows:
+
 ```
 Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
@@ -161,6 +178,7 @@ If you have troubles with merging a local git project with the cloud:
 ### Add a submodule
 
 Run this command inside of the folder where you want the submodule to be:
+
 ```bash
 git submodule add https://github.com/<gitOrganisation>/<repoName>
 ```
@@ -182,6 +200,7 @@ git submodule update --recursive --remote
 Submodules are mentionnend in many places in the `.git` folder of a project, so it is dangerous to go modify the files to delete them if you are unsure of what you are doing.
 
 Procedure:
+
 ```bash
 git submodule deinit <path_to_submodule>
 git rm <path_to_submodule>
@@ -204,7 +223,7 @@ git reset HEAD~1 # ~1 means you want to unstage only the last commit
 ## URL to specific lines in a commit
 
 It is possible to get a unique URL that links to some lines of a commit by installing the **GitHub Linker** plugin.
-Once installed, highlight some lines, R+Click -> *Github Linker: Copy link to selection*.
+Once installed, highlight some lines, R+Click -> _Github Linker: Copy link to selection_.
 Then, you can for example open an issue and paste the link in it. Once you commit your local change, the link will show you the exact highlighted lines.
 
 ## URL to a file at a certain commit
