@@ -2,9 +2,11 @@
 
 [Home](../../README.md) | [Bioreactor TOC](../bioreactor.md)
 
+**N.B.:** We created a docker for this project ([Hackuarium/bioreactor-docker](https://github.com/Hackuarium/bioreactor-docker)) which allows you to install the whole project a lot easier! This doc is only intended for someone who wants to know how to install all of the individual components by hand.
+
 The bioreactor user interface is a fairly complex problem involving Node.js, Node-Red, InfluxDB, Mosquitto and a serial to MQTT bridge.
 
-Lets see how to install all of this on a MacOS.
+Lets see how to install all of this from scratch on a MacOS.
 
 In case you are using a linux distribution, you can likely install all things using `brew` with `dnf`.
 

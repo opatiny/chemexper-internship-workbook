@@ -89,13 +89,67 @@ Open a terminal. The command below installs the last stables versions of node.js
 nvm install stable
 ```
 
-## Install `pm2`
+## Install serial to MQTT bridge
+
+We developed a serial to MQTT bridge that should be running on the computer to which the bioreactors are connected. The bridge serves as an interface between MQTT messages that come from a broker, to serial commands that are sent to the bioreactors over USB.
+
+- Create a folder `~/git/hackuarium/`
+- In this folder, run `git clone https://github.com/Hackuarium/legoino-mqtt-bridge.git`
+- Inside of the cloned folder, run `npm i` to install all the dependencies
+
+### Testing the bridge
+
+You can start the bridge with the following command:
+
+```bash
+npm run start-dev -- -b <urlToBroker> -t bioreactor
+```
+
+For example:
+
+```bash
+npm run start-dev -- -b mqtt://bioreactor.hackuarium.org:1883 -t bioreactor
+```
+
+## Launch bridge on startup using `pm2`
+
+```bash
+npm i pm2 --global
+```
+
+### Install pm2
 
 This packages allows you to run scripts at boot.
 
 ```bash
 npm i pm2 --global
 ```
+
+### Configure startup script
+
+The following command will indicate the exact command you have to use to generate a startup script.
+
+```bash
+pm2 startup
+```
+
+Once this is done, go to `~/git/hackuarium/legoino-mqtt-bridge` and run the bridge with pm2 (yes, it becomes tedious...):
+
+```bash
+pm2 start --name serialMqttBridge npm -- run start-dev -- -b mqtt://bioreactor.hackuarium.org:1883 -t bioreactor
+```
+
+Save the startup script new config:
+
+```bash
+pm2 save
+```
+
+It should work now. You can reboot the raspi and the script should be launched automatically.
+
+### Debugging
+
+To debug, use either `pm2 logs` to see the logs in real time, or use `pm2 monit` to get a whole dashboard in the terminal.
 
 ## Running bioreactor UI on startup in full screen
 
@@ -114,7 +168,9 @@ Name=Chromium
 Exec=chromium-browser --kiosk --force-device-scale-factor=0.80 <urlToGUI>
 ```
 
-The `kiosk` option allows to enter full screen. It is a mode where you cannot really see that you are in a browser, and it is difficult to escape. The other option rescales all the contents of the web page, so that it fits the raspi screen a little better.
+The `kiosk` option allows to enter full screen. It is a mode where you cannot really see that you are in a browser, and it is difficult to escape. You can however use the following command to kill all windows
+
+The other option rescales all the contents of the web page, so that it fits the raspi screen a little better.
 
 You should replace `<urlToGUI>` with the url to the graphical interface. We deployed one on [https://bioreactor.hackuarium.org](https://bioreactor.hackuarium.org).
 

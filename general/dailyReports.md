@@ -438,3 +438,9 @@ TO DO:
 - continued working on final details of the bioreactors GUI
   - implemented a button to sync the continuous queries
 - checked out the OpenJS World page and registered for the events that looked nice
+
+### 2020.06.23
+
+- debugged bioreactor GUI
+- recorded many videos about the projects over which I worked
+- started watching the conferences of open js world

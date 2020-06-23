@@ -29,7 +29,7 @@ InfluxDB is a time series data base.
 - Create databases and measurements, add data
 - Basic understanding of retention policies
 - Continuous queries
-- Accessing InfluxDB from Node-Red
+- Accessing InfluxDB from Node.js and Node-Red
 
 ## MQTT
 
