@@ -444,3 +444,7 @@ TO DO:
 - debugged bioreactor GUI
 - recorded many videos about the projects over which I worked
 - started watching the conferences of open js world
+
+### 2020.06.24
+
+- continued following the conferences of open js world
