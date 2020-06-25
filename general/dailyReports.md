@@ -451,3 +451,8 @@ TO DO:
 - worked a little on video editting
 - started learning how to use inkscape
 - used inkscape to make some explanatory drawings for the bioreactor
+
+### 2020.06.24
+
+- continued following the conferences of open js world
+- made a lot of video editing
