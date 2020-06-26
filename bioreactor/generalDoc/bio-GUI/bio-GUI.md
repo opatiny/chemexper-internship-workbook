@@ -4,6 +4,13 @@
 
 This doc was written on the 2020.06.16, and the interface may have changed significantly since then.
 
+## YouTube videos
+
+Two videos explaining how the user interface works have been produced:
+
+- [Node-Red Bioreactors GUI: The dashboard](https://youtu.be/qgBxLSVTjM8)
+- [Node-Red Bioreactors GUI: The developer side](https://youtu.be/raDn0GiZ2hM)
+
 ## General
 
 The main menu can be accessed using the button in the top-left corner. Clicking the button displays a sidebar menu with a list of all the available tabs. The current local time is displayed in the top-right corner.
