@@ -6,6 +6,7 @@
 - TailwindCSS: inline CSS styling
 - Node-red: library that allows to program in a graphical interface using boxes
 - JS docs: Writing standard javascript documentation
+- Write test cases
 - Creating parsers and generators of files (MGF)
 
 ## NPM
@@ -40,7 +41,8 @@ InfluxDB is a time series data base.
 
 ## Docker
 
-- find images on Docker Hub
+- Find images on Docker Hub
 - Create a basic Dockerfile
 - Create a basic `docker-compose.yml` file
 - Start and stop docker projects
+- Enter containers to inspect the logs

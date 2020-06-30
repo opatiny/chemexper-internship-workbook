@@ -462,3 +462,8 @@ TO DO:
 - learned a lot of inkscape
 - fixed some bugs in the GUI
 - made a bit of video editing
+
+### 2020.06.29 - w14
+
+- did boring administrative stuff all day
+
