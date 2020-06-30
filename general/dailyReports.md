@@ -467,3 +467,12 @@ TO DO:
 
 - did boring administrative stuff all day
 
+### 2020.06.30
+
+- continued the administrative work and managed to finish everything!
+- learned how to use latex locally
+
+
+And here we are, the internship is finished. Finally. I so wanted to be on holidays ;)
+
+It's still kinda sad though.
