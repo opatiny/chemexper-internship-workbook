@@ -17,23 +17,4 @@ Documentation resulting of my 3 months internship at Chemexper Sprl.
 
 Documentation on the bioreactor project can be found [here](./bioreactor/bioreactor.md).
 
-## Javascript doc
 
-- [Javascript programming tricks](./js/jsTricks.md)
-- [Using npm modules](./js/npmModules.md)
-- [NPM dev tricks](./js/npmDev.md)
-- [Useful NPM commands](./js/npmCommands.md)
-- [React.js](./js/react.md)
-- [TailwindCSS](./js/tailwindCSS.md)
-
-## Miscellaneous IT doc
-
-- [Arduino: program from VS Code](./variousIT/arduino/vscode-arduino.md)
-- [GitHub](./variousIT/github/github.md)
-- [Many GitHub users, one session: how to push](./variousIT/github/manyUsersOneAccount.md)
-- [MQTT](./variousIT/mqtt/mqtt.md)
-- [Node-red](./variousIT/nodered/nodered.md)
-- [Bash tricks](./variousIT/bashTricks.md)
-- [Grafana](./variousIT/grafana.md)
-- [InfluxDB](./variousIT/influxDB.md)
-- [VS Code](./variousIT/vscode.md)
