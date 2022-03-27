@@ -73,6 +73,8 @@ The doc comes from [here](https://www.raspberrypi.org/documentation/remote-acces
 - Select Enabled next to SSH
 - Click OK
 
+IP addr: 192.168.1.194
+
 ## Install `nvm` as root
 
 Use curl:

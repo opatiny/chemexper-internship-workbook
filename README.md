@@ -16,5 +16,3 @@ Documentation resulting of my 3 months internship at Chemexper Sprl.
 ## Bioreactor
 
 Documentation on the bioreactor project can be found [here](./bioreactor/bioreactor.md).
-
-
